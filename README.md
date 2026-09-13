@@ -30,4 +30,5 @@ against.
 
 ```bash
 python3 scripts/build-datasheet.py       # docs/prixel-datasheet.html from assets/
+python3 scripts/check-consistency.py     # fail if the spec table drifts from catalogue.json
 ```

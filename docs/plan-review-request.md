@@ -56,3 +56,66 @@ d) Anything in v1 scope you'd cut, or anything out-of-scope you'd pull forward?
 
 Reply with approve / approve-with-changes / reject + reasoning. I won't start
 until you answer.
+
+---
+
+# Verdict and decisions
+
+Reviewed by Codex (gpt-6-astra) on 2026-09-13 against commit `1cbd7e4`.
+**Result: approve-with-changes.** Stack and scope sound; the gaps were all in
+"can this design actually be assembled". Its findings and what we settled:
+
+## Accepted — data model
+
+- **Drop `flipped` as a user operation.** Reflecting a chiral piece may produce
+  an orientation the physical stamp cannot make, and nothing establishes that
+  pieces can be flipped. Whole-plate mirroring stays, as a view/export transform
+  only. ❓ Still open: **can a chiral piece physically be flipped?** A 1×1 right
+  triangle settles it. Also unresolved: do the vendor SVGs depict the stamp face
+  or the printed impression?
+- **Physical footprint ≠ ink geometry.** An SVG bounding box does not establish
+  where a neighbouring piece's stud fits, and neither does the empty space inside
+  a hollow shape. Model footprints explicitly; a rectangular default is
+  provisional and needs measuring.
+- **Add placement IDs and a persistence schema version.** Stable IDs for
+  selection, dragging and undo; versioning so saved designs survive model changes.
+- **Define coordinate and rotation semantics explicitly** — zero-based, anchor at
+  the top-left of the rotated bounding box, clockwise quarter-turns. Use
+  `cells_w`/`cells_h`; never parse the vendor size labels.
+- **Inventory across layers is undefined.** Collisions are per-plate; overlapping
+  artwork across passes is legal. If both plates stay assembled, sum usage; if
+  pieces are dismantled and reused between passes, take the max per pass.
+  ❓ **Angelo's call** — concurrent assembly is the conservative default.
+- **Versioned plate profile** (dimensions, pitch, blocked cells) that revalidates
+  saved designs when it changes.
+
+Two catalogue details Codex caught, both since handled in `assets/catalogue.json`:
+PX-030–032 have no SVGs, so raising their inventory must not silently make them
+placeable; and PX-029 has a different green fill from the other Straight Line
+pieces, so grouping by exact colour yields eight groups — group by family, not hex.
+
+## Accepted — the rest
+
+- **React stays**, justified by interdependent UI state rather than grid size.
+  Geometry, transforms, inventory accounting and validation live in plain
+  TypeScript outside React. Add footprint-sized hit targets — artwork
+  hit-testing on thin pieces will be miserable.
+- **Corner mask is config-driven**, shipping the L-triomino as a provisional
+  profile with the assumption labelled in validation and on build sheets.
+  Blocked coordinates are stored explicitly, not derived by corner logic.
+- **Scope:** v1 as proposed, all four exclusions held. Added undo/redo and JSON
+  import/export. PDF generation dropped in favour of a print layout plus
+  browser Save-as-PDF; standalone SVG export kept. Plate stays exactly
+  120×80 mm with the pick-list outside it; one sheet per pass; orientation
+  marker, calibration ruler and actual-size instruction included.
+
+## Added since the review
+
+The colour system did not exist when Codex reviewed this. See
+`docs/colour-system.md`. It introduces two entities the reviewed model lacks —
+`Ink` (stock or custom, with a recipe in parts) and `Swatch` (a measured
+printed colour with a keep/discard verdict) — and adds a measured `paperColor`
+to both the design and every swatch, because the colour model had quietly
+assumed white paper.
+
+**Not re-reviewed.** The inventory question above now has a colour dimension too.
