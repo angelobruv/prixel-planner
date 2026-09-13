@@ -8,14 +8,15 @@ first and a predictor second.** The prediction is the unreliable half — opaque
 pigments, no published K/S data, screen ≠ paper. Your measured swatches are
 ground truth, and the predictor exists only to narrow down what's worth mixing.
 
-Tsukineko publishes **no hex values for any of the 80 VersaColor colours**.
+Tsukineko publishes **no hex values for any VersaColor colour**.
 So the swatch library isn't just a nice feature — it is the only source of real
 colour data this app will ever have.
 
 ## What's known about the inks
 
-Full palette data in `assets/inks.json` (85 rows: 80 small pads / 66 large /
-80 reinkers, matching Tsukineko's own counts).
+Full palette data in `assets/inks.json` — **85 distinct colours**; the
+80 / 66 / 80 figures are per-FORMAT counts (small pad / large pad / reinker),
+not the colour total. Matches Tsukineko's own counts.
 
 - **All water-based pigment, opaque, high saturation.** No dye line exists.
 - **Metallics 091–094 are OIL-based.** Never mix them with the other 80.
@@ -42,7 +43,7 @@ alongside the test ink, so one photo self-corrects.
 
 1. Use the same uncoated stock you actually print on. Leave a patch **unstamped**
    — that's your paper-white reference.
-2. Stamp a solid patch of **VS-082 Black** on every card — that's your black point.
+2. Stamp a solid patch of **VS-000-082 Black** on every card — that's your black point.
 3. Stamp the test ink beside them. Same pressure, same dab count.
 4. Write the recipe on the card in pen (parts, not drops — see below).
 5. Dry a full 15 min before photographing. Wet pigment reads darker and more
@@ -234,7 +235,7 @@ affordance.
 ## Suggested buy list for mixing
 
 Rather than buying broadly across 80 pads: **Magenta 015, Cyan 019, Canary 011,
-Black 082, White 080** as reinkers, plus one Uninked Foam Pad per custom colour
+Black 082, White 080 (full SKUs `VCR-000-0NN`)** as reinkers, plus one Uninked Foam Pad per custom colour
 you want live at once. That's a proper subtractive CMY+K+W base — derive what
 you like, then buy the stock pad if a mix earns a permanent place.
 

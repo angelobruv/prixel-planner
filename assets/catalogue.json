@@ -7,7 +7,9 @@
       120,
       80
     ],
-    "corner_holes_removed_per_corner": 3
+    "corner_holes_removed_per_corner": 3,
+    "corner_cutout_shape": "inferred-L-triomino-UNVERIFIED",
+    "usable_cells": 372
   },
   "pieces": [
     {
@@ -125,7 +127,8 @@
       "fill": "#99d9e8",
       "viewBox": "0 0 28.34646 14.17323",
       "svg": "PX-014-1x2-inverted-half-circle.svg",
-      "size_label": "1x2"
+      "size_label": "1x2",
+      "name_expansion_page": "inverted quarter circle"
     },
     {
       "code": "PX-015",
@@ -177,7 +180,8 @@
       "fill": "#3fa9f5",
       "viewBox": "0 0 42.51969 28.34646",
       "svg": "PX-033-2x3-arc-U.svg",
-      "size_label": "2x3"
+      "size_label": "2x3",
+      "name_expansion_page": "solid arc \"U\""
     },
     {
       "code": "PX-034",
@@ -190,7 +194,8 @@
       "fill": "#3fa9f5",
       "viewBox": "0 0 42.51969 28.34646",
       "svg": "PX-034-2x3-arc-Y.svg",
-      "size_label": "2x3"
+      "size_label": "2x3",
+      "name_expansion_page": "solid arc \"Y\""
     },
     {
       "code": "PX-008",
@@ -320,7 +325,8 @@
       "fill": "#a0c75e",
       "viewBox": "0 0 14.17323 14.17323",
       "svg": "PX-026-1x1-quarter-circle-line.svg",
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "name_expansion_page": "arc line"
     },
     {
       "code": "PX-027",
@@ -333,7 +339,8 @@
       "fill": "#a0c75e",
       "viewBox": "0 0 28.34646 14.17323",
       "svg": "PX-027-1x2-half-circle-line.svg",
-      "size_label": "1x2"
+      "size_label": "1x2",
+      "name_expansion_page": "arc line"
     },
     {
       "code": "PX-028",
@@ -346,7 +353,8 @@
       "fill": "#a0c75e",
       "viewBox": "0 0 28.34646 28.34646",
       "svg": "PX-028-2x2-quarter-circle-line.svg",
-      "size_label": "2x2"
+      "size_label": "2x2",
+      "name_expansion_page": "arc line"
     },
     {
       "code": "PX-021",
@@ -372,7 +380,8 @@
       "fill": "#459261",
       "viewBox": "0 0 28.34646 14.17323",
       "svg": "PX-022-1x2-diagonal-line-chevron.svg",
-      "size_label": "1x2"
+      "size_label": "1x2",
+      "name_expansion_page": "diagonal line"
     },
     {
       "code": "PX-023",
@@ -398,7 +407,8 @@
       "fill": "#a0c75e",
       "viewBox": "0 0 14.17323 14.17323",
       "svg": "PX-024-1x1-circle-line.svg",
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "name_expansion_page": "lined circle"
     },
     {
       "code": "PX-025",
@@ -411,7 +421,8 @@
       "fill": "#a0c75e",
       "viewBox": "0 0 28.34646 28.34646",
       "svg": "PX-025-2x2-circle-line.svg",
-      "size_label": "2x2"
+      "size_label": "2x2",
+      "name_expansion_page": "lined circle"
     },
     {
       "code": "PX-030",
@@ -453,5 +464,16 @@
       "size_label": "2x2"
     }
   ],
-  "notation": "Vendor size labels are HEIGHT x WIDTH in cells (a '1x4' is 4 cells wide, 1 tall). Verified against every shipped SVG viewBox."
+  "notation": "Vendor size labels are HEIGHT x WIDTH in cells (a '1x4' is 4 cells wide, 1 tall). Verified against every shipped SVG viewBox.",
+  "_source": "https://prixel.com/products/the-prixel-printing-kit and /products/expansion-packs (fetched 2026-09-13). Verified against both pages 2026-09-13.",
+  "_units": "cells_w/cells_h are grid cells; mm_w/mm_h are millimetres. Shape SVGs in assets/shapes/ use 14.1732 user units per cell = 5mm. Multiply SVG units by 5/14.1732 to get millimetres.",
+  "_naming": "`description` follows the KIT page. 9 SKUs are named differently on the expansion-packs page; where so, `name_expansion_page` carries the vendor's other name. Order refills by the expansion-page name.",
+  "_provenance": {
+    "grid": "verified \u2014 vendor spec page",
+    "piece_sizes_and_quantities": "verified \u2014 vendor spec table, re-checked row-for-row",
+    "hxw_notation": "verified \u2014 against the viewBox of all 31 shipped SVGs",
+    "corner_cutout_shape": "UNCONFIRMED \u2014 vendor states '3 holes in each corner'; the L-triomino arrangement is INFERRED from a product photo and has not been measured. Keep the blocked-cell mask config-driven.",
+    "kit_piece_count": "316 is the sum of the vendor's own quantity column, re-added by hand. The vendor headline says 310. Treat counts as user-editable.",
+    "press_outer_size": "VENDOR CONTRADICTION \u2014 the page states '6\" x 4\" (17cm x 10cm)', but 6x4in is 15.2x10.2cm. Unresolved; do not rely on either without measuring."
+  }
 }

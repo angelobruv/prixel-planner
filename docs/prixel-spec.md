@@ -11,7 +11,7 @@ the Illustrator planning template, and the shipped `PRIXELMono.otf`. Local copie
 | Setup plate work area | **24 × 16 cells** (landscape; 16 × 24 portrait) |
 | Cell pitch | **5 mm** (≈ 1/5") — pitch is both x and y |
 | Effective printing area | **120 × 80 mm** (4.75" × 3.125") — 24×5 by 16×5 exactly |
-| Press outer size | 6" × 4" (17 × 10 cm) |
+| Press outer size | 6" × 4" — ⚠️ vendor says "(17cm × 10cm)" but 6×4" is 15.2×10.2 cm. Their two units disagree; measure before relying on either. |
 | Corner holes | 3 holes removed at **each** corner (magnet boss) → **372 usable cells** of 384 |
 | Target stock | 4×6" card (A2 US / A6 elsewhere) |
 | Patent | US 20230264503A1 |
@@ -92,7 +92,10 @@ already authored at real scale — `width="5mm"`, `viewBox="0 0 14.1732 14.1732"
 - Physical set: **324 characters**, $25, SKU `850051128372`. Every glyph is **1×1** —
   one 5 mm cell — designed to be rotated and stacked alongside shapes.
 - Digital `.otf` in `assets/fonts/PRIXELMono.otf` — name "PRIXEL Mono 2026", v2.000,
-  1000 upm, **monospaced (all advances 1000)**, cap height 600, ascender 800 / descender -200.
+  1000 upm, cap height 600, ascender 800 / descender -200.
+  **Monospaced at 1000 for 270 of 273 glyphs.** Three are zero-advance: the two
+  combining marks (U+0300, U+0302 — correct) and **`|` U+007C, which is a plain
+  printable ASCII glyph with advance 0 — a font defect.** Text layout must special-case it.
   273 glyphs, **123 mapped codepoints**.
 - Charset: ASCII (no `%`, `<`, `>`, `` ` ``, `{}`, `~`, and **uppercase + lowercase are
   separate**), plus `¡ £ ¥ · ¿ Ç × ß ç`, combining accents, curly quotes, en/em dash,
