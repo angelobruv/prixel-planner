@@ -138,6 +138,7 @@ type Swatch = {
   measuredHex: string                       // after white/black rescale
   photoRef?: string
   paperStock: string
+  paperColor: string                        // measured, NOT assumed white
   verdict: 'keep' | 'discard' | 'undecided'
   notes: string
   measuredAt: string
@@ -147,6 +148,67 @@ type Swatch = {
 `predictedHex` and `measuredHex` stay separate columns forever. Showing the
 delta between them is what makes the predictor trustworthy over time — and it
 is the honest way to display a guess.
+
+## White ink
+
+White does two unrelated jobs. Only one of them is "brighter".
+
+### As a mixing component it makes tints, not brightness
+
+Adding white raises lightness and **cuts chroma** — lighter and chalkier, never
+more vivid. Confirmed: craft pigment whites are titanium-dioxide-type opaque
+whites that scatter light broadly and flatten saturation. Letterpress ink mixing
+distinguishes these from a *transparent/zinc "mixing white"* that lightens
+without the chalk — but no transparent mixing white appears to exist in the
+stamp-ink world, so **chalkiness is unavoidable when you tint.** Often the better
+move is buying the lighter stock pad rather than tinting down to it.
+
+White is also the **reference pigment for tinting-strength calibration**, so you
+want a bottle regardless of whether you ever print white.
+
+### As an ink on dark stock — VersaColor White does not cover
+
+VersaColor 080 White prints a soft translucent grey-white on matte black
+cardstock, not crisp white. Tsukineko's own page recommends **metallics** for
+dark papers and never suggests white. Retailer "dense/opaque" copy refers to
+light stock.
+
+🚫 **Do NOT use StazOn Opaque Cotton White on PRIXEL.** It is the best-reviewed
+opaque white, but it is a **solvent** ink and it **permanently stains clear,
+silicone and photopolymer stamps.** PRIXEL pieces are silicone. It also soaks
+into porous cardstock, so it loses on both counts here.
+
+Silicone-safe options, best first:
+
+| Option | Type | Verdict |
+|---|---|---|
+| **VersaCraft White** | water-based pigment | Best fit. Porous-surface formula, reported crisp and opaque on cardstock. PRIXEL already stocks VersaCraft. |
+| **VersaMark + white embossing powder** | pigment + heat | The community's gold standard for genuinely solid white on black. Needs a heat gun. |
+| **Delicata White Shimmer** | pigment shimmer | Marketed and reviewed as opaque on dark stock. Air-dry only — heat kills the shine. |
+| **Brilliance Moonlight White** | pigment/pearl | Semi-opaque at best; one detailed review found near-nothing on matte black. |
+| StazOn Opaque Cotton White | solvent | **Excluded** — stains silicone permanently. |
+
+All the non-solvent options are water-based and carry no silicone risk.
+
+### If you want brighter, not lighter
+
+Ranked by actual effect:
+
+1. **Paper whiteness.** The strongest lever by some distance, and it lifts every
+   colour at once for free. Note **CIE whiteness** matters more than ISO
+   brightness for colour work.
+2. **Full pigment load** — undiluted ink, firm even transfer. The literal
+   opposite of adding white.
+3. **Neon / fluorescent.** Retailer listings and a review blog report a
+   **VersaColor Neon** range exists. ⚠️ It does not appear on Tsukineko's own
+   English VersaColor page, so it is absent from `assets/inks.json` — confirm
+   before ordering. One reviewer notes neons shift under alcohol markers.
+4. **Pearlescent / metallic sheen** (Brilliance, Encore, Delicata). Adds sparkle
+   and luminosity, which is a different perceptual axis from saturation. Good as
+   an accent, weak as a base-colour vividness lever.
+
+⚠️ Every opacity and vividness claim above is qualitative crafter reporting.
+No head-to-head colorimetric comparison of these inks on cardstock was found.
 
 ## What the UI must say
 
@@ -165,6 +227,9 @@ affordance.
 3. **Paper delta.** Stamp the four kit inks on your actual stock and measure.
    That's the first real `printed_hex` data, and it shows how far the pad-surface
    samples in `inks.json` are from truth.
+4. **White coverage.** Stamp VersaColor White on black or kraft card, and again
+   after a second pass. Decides whether you need VersaCraft White or the
+   embossing route for dark-stock work.
 
 ## Suggested buy list for mixing
 
@@ -172,6 +237,10 @@ Rather than buying broadly across 80 pads: **Magenta 015, Cyan 019, Canary 011,
 Black 082, White 080** as reinkers, plus one Uninked Foam Pad per custom colour
 you want live at once. That's a proper subtractive CMY+K+W base — derive what
 you like, then buy the stock pad if a mix earns a permanent place.
+
+Add **VersaCraft White** if you want to print on kraft or black stock — the
+VersaColor white will not cover there. Buy a brighter, higher-CIE-whiteness
+stock before buying more colour; it lifts everything you already own.
 
 Sources: [VersaColor](https://www.tsukineko.co.jp/en/products/versa-color-series/) ·
 [Uninked Foam Pad](https://www.tsukineko.co.jp/en/products/uninked-foam-pad/) ·
