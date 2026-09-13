@@ -1,0 +1,27 @@
+<svg viewBox="0 0 14.17323 14.17323" height="5mm" width="5mm" xmlns="http://www.w3.org/2000/svg" id="art">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #7ebe5e;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect ry=".56693" rx=".56693" height="13.6063" width="2.83465" y=".28347" x=".28348" class="cls-2"></rect>
+    <rect height="13.6063" width="13.6063" y=".28347" x=".28348" class="cls-1"></rect>
+    <rect height="14.17323" width="14.17323" y="0" x=".00001" class="cls-1"></rect>
+  </g>
+  <g>
+    <rect transform="translate(-5.38582 19.55907) rotate(-90)" ry=".56693" rx=".56693" height="13.6063" width="2.83465" y="5.66929" x="5.6693" class="cls-2"></rect>
+    <rect transform="translate(0 14.17324) rotate(-90)" height="13.6063" width="13.6063" y=".28347" x=".28348" class="cls-1"></rect>
+    <rect transform="translate(0 14.17324) rotate(-90)" height="14.17323" width="14.17323" y="0" x="0" class="cls-1"></rect>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="art" xmlns="http://www.w3.org/2000/svg" width="5mm" height="5mm" viewBox="0 0 14.1732 14.1732">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #3fa9f5;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="m.2835.8698v12.453c0,.3131.2538.5669.5669.5669h12.453c.3206,0,.5875-.2676.5739-.5879C13.5777,6.255,7.9182.5955.8714.2959c-.3203-.0136-.5879.2533-.5879.5739Z"/>
+  <rect class="cls-1" x="0" y="0" width="14.1732" height="14.1732" transform="translate(0 14.1732) rotate(-90)"/>
+</svg>

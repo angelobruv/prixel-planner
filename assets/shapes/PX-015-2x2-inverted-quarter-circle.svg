@@ -1,0 +1,19 @@
+<svg viewBox="0 0 28.34646 28.34646" height="10mm" width="10mm" xmlns="http://www.w3.org/2000/svg" id="art">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #99d9e8;
+      }
+    </style>
+  </defs>
+  <path d="M.28347.2834v27.77965h27.77953C12.72079,28.06305.28347,15.62573.28347.2834Z" class="cls-2"></path>
+  <rect transform="translate(28.34646 0) rotate(90)" height="28.34646" width="28.34646" y="0" x="0" class="cls-1"></rect>
+</svg>

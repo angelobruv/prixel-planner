@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="art" xmlns="http://www.w3.org/2000/svg" width="10mm" height="10mm" viewBox="0 0 28.3465 28.3465">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #3fa9f5;
+      }
+    </style>
+  </defs>
+  <circle class="cls-2" cx="14.1732" cy="14.1732" r="13.8898"/>
+  <rect class="cls-1" x="0" y="0" width="28.3465" height="28.3465"/>
+</svg>

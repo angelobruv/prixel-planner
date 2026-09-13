@@ -1,0 +1,20 @@
+<svg viewBox="0 0 14.17323 14.17323" height="5mm" width="5mm" xmlns="http://www.w3.org/2000/svg" id="art">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #459261;
+      }
+    </style>
+  </defs>
+  <path d="M13.8898,13.32281v-1.20263c0-.15036-.05973-.29456-.16605-.40088L2.45392.44958c-.10632-.10632-.25052-.16605-.40088-.16605H.85041C.5373.28353.28348.53736.28348.85046v1.20263c0,.15036.05973.29456.16605.40088l11.26977,11.26971c.10632.10632.25052.16605.40088.16605h1.2027c.31311,0,.56693-.25382.56693-.56693Z" class="cls-2"></path>
+  <rect transform="translate(14.17322 0) rotate(90)" height="13.6063" width="13.6063" y=".28346" x=".28346" class="cls-1"></rect>
+  <rect transform="translate(14.17323 0) rotate(90)" height="14.17323" width="14.17323" y="0" x="0" class="cls-1"></rect>
+</svg>
