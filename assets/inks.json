@@ -1,0 +1,1002 @@
+{
+  "_source": "https://www.tsukineko.co.jp/en/products/versa-color-series/ (fetched 2026-09-13)",
+  "_warning": "No official hex values are published. pad_sample_hex was sampled by us from prixel.com pad product photos \u2014 it is the PAD SURFACE under studio lighting, NOT a printed impression. printed_hex is null until measured from a real stamped swatch.",
+  "line": "Tsukineko VersaColor",
+  "chemistry": "water-based pigment, opaque, high saturation. Metallics (091-094) are OIL-based \u2014 do not mix with the water-based colours.",
+  "drying_minutes": [
+    10,
+    15
+  ],
+  "recommended_surface": "smooth uncoated cardstock",
+  "formats": {
+    "small": {
+      "sku_prefix": "VS-000",
+      "count": 80,
+      "body_mm": [
+        34,
+        34,
+        20
+      ],
+      "impression_mm": [
+        24,
+        24
+      ]
+    },
+    "large": {
+      "sku_prefix": "VC-000",
+      "count": 66,
+      "body_mm": [
+        99,
+        68,
+        19
+      ],
+      "impression_mm": [
+        76,
+        47
+      ]
+    },
+    "inker": {
+      "sku_prefix": "VCR-000",
+      "count": 80,
+      "body_mm": [
+        25,
+        25,
+        73
+      ],
+      "note": "Ultimate Pigment Inker \u2014 the refill/reinker bottle"
+    }
+  },
+  "uninked_pad": {
+    "sku": "UI000001",
+    "name": "Tsukineko Uninked Foam Pad",
+    "body_mm": [
+      99,
+      68,
+      19
+    ],
+    "impression_mm": [
+      76,
+      47
+    ],
+    "note": "Same footprint as VersaColor L. Officially rated for VersaColor / Brilliance / VersaCraft / StazOn reinkers. This is the vessel for a custom mix. No blank mini-size pad exists.",
+    "source": "https://www.tsukineko.co.jp/en/products/uninked-foam-pad/"
+  },
+  "inking_constraint": "PRIXEL's print area is 120x80mm; the largest pad impression is 76x47mm. Tsukineko's own guidance for a stamp bigger than the pad is to tap the pad onto the stamp by hand.",
+  "colors": [
+    {
+      "code": "011",
+      "name": "Canary",
+      "sku_small": "VS-000-011",
+      "sku_large": "VC-000-011",
+      "sku_inker": "VCR-000-011",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#fed201",
+      "printed_hex": null
+    },
+    {
+      "code": "012",
+      "name": "Marigold",
+      "sku_small": "VS-000-012",
+      "sku_large": "VC-000-012",
+      "sku_inker": "VCR-000-012",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "013",
+      "name": "Orange",
+      "sku_small": "VS-000-013",
+      "sku_large": "VC-000-013",
+      "sku_inker": "VCR-000-013",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#fc4705",
+      "printed_hex": null
+    },
+    {
+      "code": "014",
+      "name": "Scarlet",
+      "sku_small": "VS-000-014",
+      "sku_large": "VC-000-014",
+      "sku_inker": "VCR-000-014",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#e92b36",
+      "printed_hex": null
+    },
+    {
+      "code": "015",
+      "name": "Magenta",
+      "sku_small": "VS-000-015",
+      "sku_large": "VC-000-015",
+      "sku_inker": "VCR-000-015",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "016",
+      "name": "Peony",
+      "sku_small": "VS-000-016",
+      "sku_large": "VC-000-016",
+      "sku_inker": "VCR-000-016",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "017",
+      "name": "Violet",
+      "sku_small": "VS-000-017",
+      "sku_large": "VC-000-017",
+      "sku_inker": "VCR-000-017",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#573582",
+      "printed_hex": null
+    },
+    {
+      "code": "018",
+      "name": "Royal Blue",
+      "sku_small": "VS-000-018",
+      "sku_large": "VC-000-018",
+      "sku_inker": "VCR-000-018",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#283da1",
+      "printed_hex": null
+    },
+    {
+      "code": "019",
+      "name": "Cyan",
+      "sku_small": "VS-000-019",
+      "sku_large": "VC-000-019",
+      "sku_inker": "VCR-000-019",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#0484d6",
+      "printed_hex": null
+    },
+    {
+      "code": "020",
+      "name": "Turquoise",
+      "sku_small": "VS-000-020",
+      "sku_large": "VC-000-020",
+      "sku_inker": "VCR-000-020",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#0391a2",
+      "printed_hex": null
+    },
+    {
+      "code": "021",
+      "name": "Green",
+      "sku_small": "VS-000-021",
+      "sku_large": "VC-000-021",
+      "sku_inker": "VCR-000-021",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#035543",
+      "printed_hex": null
+    },
+    {
+      "code": "022",
+      "name": "Fresh Green",
+      "sku_small": "VS-000-022",
+      "sku_large": "VC-000-022",
+      "sku_inker": "VCR-000-022",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#05ae34",
+      "printed_hex": null
+    },
+    {
+      "code": "023",
+      "name": "Rose Red",
+      "sku_small": "VS-000-023",
+      "sku_large": "VC-000-023",
+      "sku_inker": "VCR-000-023",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "024",
+      "name": "Opera Pink",
+      "sku_small": "VS-000-024",
+      "sku_large": "VC-000-024",
+      "sku_inker": "VCR-000-024",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#ef3580",
+      "printed_hex": null
+    },
+    {
+      "code": "025",
+      "name": "Cardinal",
+      "sku_small": "VS-000-025",
+      "sku_large": "VC-000-025",
+      "sku_inker": "VCR-000-025",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "026",
+      "name": "Boysenberry",
+      "sku_small": "VS-000-026",
+      "sku_large": "VC-000-026",
+      "sku_inker": "VCR-000-026",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "027",
+      "name": "Indigo",
+      "sku_small": "VS-000-027",
+      "sku_large": "VC-000-027",
+      "sku_inker": "VCR-000-027",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "028",
+      "name": "Pacific",
+      "sku_small": "VS-000-028",
+      "sku_large": "VC-000-028",
+      "sku_inker": "VCR-000-028",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "029",
+      "name": "Evergreen",
+      "sku_small": "VS-000-029",
+      "sku_large": "VC-000-029",
+      "sku_inker": "VCR-000-029",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "031",
+      "name": "Apricot",
+      "sku_small": null,
+      "sku_large": null,
+      "sku_inker": "VCR-000-031",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "032",
+      "name": "Coral",
+      "sku_small": null,
+      "sku_large": null,
+      "sku_inker": "VCR-000-032",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "033",
+      "name": "Pink",
+      "sku_small": "VS-000-033",
+      "sku_large": "VC-000-033",
+      "sku_inker": "VCR-000-033",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "034",
+      "name": "Orchid",
+      "sku_small": "VS-000-034",
+      "sku_large": "VC-000-034",
+      "sku_inker": "VCR-000-034",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "035",
+      "name": "Lilac",
+      "sku_small": "VS-000-035",
+      "sku_large": "VC-000-035",
+      "sku_inker": "VCR-000-035",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "036",
+      "name": "Heliotrope",
+      "sku_small": "VS-000-036",
+      "sku_large": "VC-000-036",
+      "sku_inker": "VCR-000-036",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "037",
+      "name": "Lavender",
+      "sku_small": "VS-000-037",
+      "sku_large": "VC-000-037",
+      "sku_inker": "VCR-000-037",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "038",
+      "name": "Sky Blue",
+      "sku_small": "VS-000-038",
+      "sku_large": "VC-000-038",
+      "sku_inker": "VCR-000-038",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "040",
+      "name": "Mint",
+      "sku_small": "VS-000-040",
+      "sku_large": null,
+      "sku_inker": "VCR-000-040",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "041",
+      "name": "Apple Green",
+      "sku_small": null,
+      "sku_large": null,
+      "sku_inker": "VCR-000-041",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "042",
+      "name": "Lime",
+      "sku_small": "VS-000-042",
+      "sku_large": "VC-000-042",
+      "sku_inker": "VCR-000-042",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "052",
+      "name": "Topaz",
+      "sku_small": "VS-000-052",
+      "sku_large": null,
+      "sku_inker": "VCR-000-052",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "053",
+      "name": "Cocoa",
+      "sku_small": "VS-000-053",
+      "sku_large": null,
+      "sku_inker": "VCR-000-053",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "054",
+      "name": "Brown",
+      "sku_small": "VS-000-054",
+      "sku_large": "VC-000-054",
+      "sku_inker": "VCR-000-054",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#57373b",
+      "printed_hex": null
+    },
+    {
+      "code": "055",
+      "name": "Umber",
+      "sku_small": "VS-000-055",
+      "sku_large": "VC-000-055",
+      "sku_inker": "VCR-000-055",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "056",
+      "name": "Cinnamon",
+      "sku_small": "VS-000-056",
+      "sku_large": null,
+      "sku_inker": "VCR-000-056",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "057",
+      "name": "Old Rose",
+      "sku_small": "VS-000-057",
+      "sku_large": "VC-000-057",
+      "sku_inker": "VCR-000-057",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "058",
+      "name": "Smoke Blue",
+      "sku_small": "VS-000-058",
+      "sku_large": "VC-000-058",
+      "sku_inker": "VCR-000-058",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "060",
+      "name": "Celadon",
+      "sku_small": "VS-000-060",
+      "sku_large": "VC-000-060",
+      "sku_inker": "VCR-000-060",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "061",
+      "name": "Olive",
+      "sku_small": "VS-000-061",
+      "sku_large": "VC-000-061",
+      "sku_inker": "VCR-000-061",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "063",
+      "name": "Split Pea",
+      "sku_small": "VS-000-063",
+      "sku_large": "VC-000-063",
+      "sku_inker": "VCR-000-063",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "064",
+      "name": "Khaki",
+      "sku_small": "VS-000-064",
+      "sku_large": "VC-000-064",
+      "sku_inker": "VCR-000-064",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "066",
+      "name": "Burgundy",
+      "sku_small": "VS-000-066",
+      "sku_large": "VC-000-066",
+      "sku_inker": "VCR-000-066",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "068",
+      "name": "Atlantic",
+      "sku_small": "VS-000-068",
+      "sku_large": "VC-000-068",
+      "sku_inker": "VCR-000-068",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "069",
+      "name": "Bamboo",
+      "sku_small": "VS-000-069",
+      "sku_large": "VC-000-069",
+      "sku_inker": "VCR-000-069",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "080",
+      "name": "White",
+      "sku_small": "VS-000-080",
+      "sku_large": "VC-000-080",
+      "sku_inker": "VCR-000-080",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "081",
+      "name": "Sky Gray",
+      "sku_small": "VS-000-081",
+      "sku_large": "VC-000-081",
+      "sku_inker": "VCR-000-081",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "082",
+      "name": "Black",
+      "sku_small": "VS-000-082",
+      "sku_large": "VC-000-082",
+      "sku_inker": "VCR-000-082",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": "#26262f",
+      "printed_hex": null
+    },
+    {
+      "code": "083",
+      "name": "Chateau Gray",
+      "sku_small": "VS-000-083",
+      "sku_large": null,
+      "sku_inker": "VCR-000-083",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "091",
+      "name": "Gold",
+      "sku_small": "VS-000-091",
+      "sku_large": null,
+      "sku_inker": null,
+      "base": "oil",
+      "metallic": true,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "092",
+      "name": "Silver",
+      "sku_small": "VS-000-092",
+      "sku_large": null,
+      "sku_inker": null,
+      "base": "oil",
+      "metallic": true,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "093",
+      "name": "Copper",
+      "sku_small": "VS-000-093",
+      "sku_large": null,
+      "sku_inker": null,
+      "base": "oil",
+      "metallic": true,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "094",
+      "name": "Bronze",
+      "sku_small": "VS-000-094",
+      "sku_large": null,
+      "sku_inker": null,
+      "base": "oil",
+      "metallic": true,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "101",
+      "name": "Camellia",
+      "sku_small": "VS-000-101",
+      "sku_large": "VC-000-101",
+      "sku_inker": "VCR-000-101",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "103",
+      "name": "Imperial Blue",
+      "sku_small": "VS-000-103",
+      "sku_large": "VC-000-103",
+      "sku_inker": "VCR-000-103",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "104",
+      "name": "Lagoon Blue",
+      "sku_small": "VS-000-104",
+      "sku_large": "VC-000-104",
+      "sku_inker": "VCR-000-104",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "105",
+      "name": "Tropical Green",
+      "sku_small": "VS-000-105",
+      "sku_large": null,
+      "sku_inker": "VCR-000-105",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "121",
+      "name": "Citron",
+      "sku_small": null,
+      "sku_large": null,
+      "sku_inker": "VCR-000-121",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "131",
+      "name": "Narcissus",
+      "sku_small": "VS-000-131",
+      "sku_large": null,
+      "sku_inker": "VCR-000-131",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "133",
+      "name": "Seashell",
+      "sku_small": "VS-000-133",
+      "sku_large": "VC-000-133",
+      "sku_inker": "VCR-000-133",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "134",
+      "name": "Petal Pink",
+      "sku_small": "VS-000-134",
+      "sku_large": "VC-000-134",
+      "sku_inker": "VCR-000-134",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "135",
+      "name": "Hyacinth",
+      "sku_small": "VS-000-135",
+      "sku_large": "VC-000-135",
+      "sku_inker": "VCR-000-135",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "136",
+      "name": "Baby Blue",
+      "sku_small": "VS-000-136",
+      "sku_large": "VC-000-136",
+      "sku_inker": "VCR-000-136",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "137",
+      "name": "Pale Blue",
+      "sku_small": null,
+      "sku_large": null,
+      "sku_inker": "VCR-000-137",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "138",
+      "name": "Seafoam",
+      "sku_small": "VS-000-138",
+      "sku_large": "VC-000-138",
+      "sku_inker": null,
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "151",
+      "name": "Sand Beige",
+      "sku_small": "VS-000-151",
+      "sku_large": null,
+      "sku_inker": "VCR-000-151",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "152",
+      "name": "Ash Rose",
+      "sku_small": "VS-000-152",
+      "sku_large": null,
+      "sku_inker": "VCR-000-152",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "154",
+      "name": "Bark",
+      "sku_small": "VS-000-154",
+      "sku_large": "VC-000-154",
+      "sku_inker": "VCR-000-154",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "155",
+      "name": "Paprika",
+      "sku_small": "VS-000-155",
+      "sku_large": "VC-000-155",
+      "sku_inker": "VCR-000-155",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "156",
+      "name": "Raspberry",
+      "sku_small": "VS-000-156",
+      "sku_large": "VC-000-156",
+      "sku_inker": "VCR-000-156",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "157",
+      "name": "Amethyst",
+      "sku_small": "VS-000-157",
+      "sku_large": "VC-000-157",
+      "sku_inker": "VCR-000-157",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "158",
+      "name": "Lapislazuli",
+      "sku_small": "VS-000-158",
+      "sku_large": "VC-000-158",
+      "sku_inker": "VCR-000-158",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "159",
+      "name": "Mountain Lake",
+      "sku_small": "VS-000-159",
+      "sku_large": "VC-000-159",
+      "sku_inker": "VCR-000-159",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "160",
+      "name": "Winter Green",
+      "sku_small": "VS-000-160",
+      "sku_large": "VC-000-160",
+      "sku_inker": "VCR-000-160",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "161",
+      "name": "Green Tea",
+      "sku_small": "VS-000-161",
+      "sku_large": "VC-000-161",
+      "sku_inker": "VCR-000-161",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "171",
+      "name": "Pinecone",
+      "sku_small": "VS-000-171",
+      "sku_large": "VC-000-171",
+      "sku_inker": "VCR-000-171",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "172",
+      "name": "Grape",
+      "sku_small": "VS-000-172",
+      "sku_large": "VC-000-172",
+      "sku_inker": "VCR-000-172",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "173",
+      "name": "Neptune",
+      "sku_small": "VS-000-173",
+      "sku_large": "VC-000-173",
+      "sku_inker": "VCR-000-173",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "174",
+      "name": "Charcoal",
+      "sku_small": "VS-000-174",
+      "sku_large": "VC-000-174",
+      "sku_inker": "VCR-000-174",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "181",
+      "name": "Vanilla",
+      "sku_small": "VS-000-181",
+      "sku_large": null,
+      "sku_inker": "VCR-000-181",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "182",
+      "name": "Bisque",
+      "sku_small": "VS-000-182",
+      "sku_large": "VC-000-182",
+      "sku_inker": "VCR-000-182",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "183",
+      "name": "Cement",
+      "sku_small": "VS-000-183",
+      "sku_large": "VC-000-183",
+      "sku_inker": "VCR-000-183",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "184",
+      "name": "Misty Mauve",
+      "sku_small": "VS-000-184",
+      "sku_large": "VC-000-184",
+      "sku_inker": "VCR-000-184",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "185",
+      "name": "Polar Blue",
+      "sku_small": "VS-000-185",
+      "sku_large": "VC-000-185",
+      "sku_inker": "VCR-000-185",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "186",
+      "name": "Laurel Leaf",
+      "sku_small": "VS-000-186",
+      "sku_large": "VC-000-186",
+      "sku_inker": "VCR-000-186",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    },
+    {
+      "code": "187",
+      "name": "Sage",
+      "sku_small": "VS-000-187",
+      "sku_large": "VC-000-187",
+      "sku_inker": "VCR-000-187",
+      "base": "water",
+      "metallic": false,
+      "pad_sample_hex": null,
+      "printed_hex": null
+    }
+  ]
+}
