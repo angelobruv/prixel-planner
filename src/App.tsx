@@ -44,6 +44,8 @@ export default function App() {
   const [sku, setSku] = useState<string | null>(null)
   const [rotation, setRotation] = useState<Rotation>(0)
   const [selectedIds, setSelectedIds] = useState<string[]>([])
+  // Pieces, not references: the source may be cut or undone before the paste.
+  const [clipboard, setClipboard] = useState<Placement[]>([])
   const setSelected = (id: string | null) => setSelectedIds(id ? [id] : [])
   const selectedPieces = active.placements.filter(p => selectedIds.includes(p.id))
   const selection = selectedPieces.length === 1 ? selectedPieces[0] : undefined
@@ -145,6 +147,37 @@ export default function App() {
       editLayer(l => { l.placements = l.placements.filter(p => !selectedIds.includes(p.id)) }); setSelected(null)
     }
   }
+  const plural = (n: number) => `${n} piece${n === 1 ? '' : 's'}`
+  function copySelection() {
+    if (!selectedPieces.length || busy) return
+    setClipboard(selectedPieces.map(p => ({ ...p })))
+    setNotice(`${plural(selectedPieces.length)} copied. Choose a pass, then paste.`)
+  }
+  function cutSelection() {
+    if (!selectedPieces.length || mirror || busy) return
+    const n = selectedPieces.length
+    setClipboard(selectedPieces.map(p => ({ ...p })))
+    editLayer(l => { l.placements = l.placements.filter(p => !selectedIds.includes(p.id)) })
+    setSelected(null)
+    setNotice(`${plural(n)} cut. Choose a pass, then paste to land them there.`)
+  }
+  /** Paste into the ACTIVE pass. In place first — that is what moves a motif
+   *  between passes without shifting it. Offset only if that square is taken,
+   *  which is the same-pass duplicate case. */
+  function pasteClipboard() {
+    if (!clipboard.length || mirror || busy) return
+    const attempt = (dx: number, dy: number) => {
+      const fresh = clipboard.map(p => ({ ...p, id: uid(), col: p.col + dx, row: p.row + dy }))
+      return { fresh, ...attemptPlacements(project, active.id, fresh) }
+    }
+    const inPlace = attempt(0, 0)
+    const landed = inPlace.project ? inPlace : attempt(1, 1)
+    if (!landed.project) { setNotice(inPlace.error ?? 'That paste does not fit on this pass.'); return }
+    commit(landed.project); setSelectedIds(landed.fresh.map(p => p.id))
+    setNotice(`${plural(landed.fresh.length)} pasted into ${active.name}`
+      + (landed === inPlace ? '' : ', offset to clear the originals')
+      + '. Undo restores the previous composition.')
+  }
   function screenDelta(key: string): [number, number] {
     let [x, y] = key === 'ArrowLeft' ? [-1, 0] : key === 'ArrowRight' ? [1, 0] : key === 'ArrowUp' ? [0, -1] : [0, 1]
     if (mirror) x = -x
@@ -190,6 +223,9 @@ export default function App() {
       }
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'z') { e.preventDefault(); if (e.shiftKey) redo(); else undo() }
       else if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'y') { e.preventDefault(); redo() }
+      else if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'c') { e.preventDefault(); copySelection() }
+      else if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'x') { e.preventDefault(); cutSelection() }
+      else if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'v') { e.preventDefault(); pasteClipboard() }
       else if (!e.metaKey && !e.ctrlKey && !e.altKey && e.key.toLowerCase() === 'r') { e.preventDefault(); rotate() }
       else if (e.key === 'Delete' || e.key === 'Backspace') { e.preventDefault(); remove() }
     }
@@ -383,7 +419,7 @@ export default function App() {
         <section className="inspector-section"><div className="panel-heading"><h2>Ink passes</h2><button aria-label="Add ink pass" disabled={d.layers.length >= 50} onClick={() => { const l = newLayer(`Pass ${d.layers.length + 1}`, '#456A64'); commit(p => { p.design.layers.push(l); p.design.activeLayerId = l.id }); setSelected(null) }}>+</button></div><p className="micro">Print from top to bottom. Later inks cover earlier ones in this preview.</p>
           <ol className="layer-list">{d.layers.map((l, i) => <li key={l.id} className={l.id === active.id ? 'active' : ''}><button className="layer-select" onClick={() => chooseLayer(l.id)} aria-pressed={l.id === active.id}><span className="ink-chip" style={{ background: layerInkHex(l) }}/><span><strong>{l.name}</strong><small>{l.placements.length} pieces · pass {i+1}</small></span></button><button className="visibility" aria-label={`${hidden.includes(l.id) ? 'Show' : 'Hide'} ${l.name}`} title="Preview visibility does not release inventory" disabled={mirror} onClick={() => setHidden(hidden.includes(l.id) ? hidden.filter(id => id !== l.id) : [...hidden, l.id])}>{hidden.includes(l.id) ? '○' : '●'}</button></li>)}</ol>
           <div className="layer-edit"><label>Pass name<input value={active.name} maxLength={100} onChange={e => editLayer(l => { l.name = e.target.value })}/></label><InkPicker key={active.id} layer={active} onChange={(hex, inkSku) => editLayer(l => { l.ink = hex; if (inkSku) l.inkSku = inkSku; else delete l.inkSku })}/></div>
-          <div className="layer-tools"><button onClick={() => reorder(-1)} disabled={d.layers[0].id === active.id}>↑ Earlier</button><button onClick={() => reorder(1)} disabled={d.layers.at(-1)!.id === active.id}>↓ Later</button><button disabled={d.layers.length === 1} onClick={() => { commit(p => { p.design.layers = p.design.layers.filter(l => l.id !== active.id); p.design.activeLayerId = p.design.layers[0].id }); setSelected(null) }}>Remove</button></div>
+          <div className="layer-tools"><button onClick={cutSelection} disabled={!selectedPieces.length || mirror || busy} title="Cut selection (Ctrl/Cmd+X)">Cut</button><button onClick={copySelection} disabled={!selectedPieces.length || busy} title="Copy selection (Ctrl/Cmd+C)">Copy</button><button onClick={pasteClipboard} disabled={!clipboard.length || mirror || busy} title="Paste into this pass (Ctrl/Cmd+V)">{clipboard.length ? `Paste ${clipboard.length} here` : 'Paste here'}</button></div><div className="layer-tools"><button onClick={() => reorder(-1)} disabled={d.layers[0].id === active.id}>↑ Earlier</button><button onClick={() => reorder(1)} disabled={d.layers.at(-1)!.id === active.id}>↓ Later</button><button disabled={d.layers.length === 1} onClick={() => { commit(p => { p.design.layers = p.design.layers.filter(l => l.id !== active.id); p.design.activeLayerId = p.design.layers[0].id }); setSelected(null) }}>Remove</button></div>
         </section>
         <section className="inspector-section"><h2>Plate & paper</h2><label className="field-row">Orientation<select aria-label="Orientation" value={d.orientation} onChange={e => { setDesign('orientation', e.target.value as Design['orientation']); setHover(null) }}><option value="landscape">Landscape</option><option value="portrait">Portrait</option></select></label><label className="color-field">Paper preview<input type="color" aria-label="Paper colour" value={d.paperColor} onChange={e => setDesign('paperColor', e.target.value)}/><span>{d.paperColor.toUpperCase()}</span></label></section>
         <section className="inspector-section"><h2>Assembly</h2><label className="stacked-label" htmlFor="inventory-mode">How will you use your pieces?</label><select id="inventory-mode" value={d.inventoryMode} onChange={e => setDesign('inventoryMode', e.target.value as Design['inventoryMode'])}><option value="concurrent">Keep passes assembled (sum)</option><option value="reuse">Reuse between passes (max)</option></select><p className="micro">{d.inventoryMode === 'concurrent' ? 'Every pass reserves its pieces at the same time.' : 'Dismantle and clean pieces before the next pass. Counts use the largest demand per SKU.'}</p>{d.layers.length > 2 && <p className="assembly-note">{d.inventoryMode === 'concurrent' ? `${d.layers.length} passes need ${d.layers.length} assembled plates. Your kit has two. Switch to reuse, or provide extra plates.` : `${d.layers.length} passes can be prepared sequentially using your two plates.`}</p>}</section>
