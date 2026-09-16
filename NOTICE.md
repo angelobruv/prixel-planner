@@ -6,6 +6,8 @@ It vendors copyrighted vendor material and a non-commercially-licensed font.
 | Path | What | Licence / status |
 |---|---|---|
 | `assets/fonts/PRIXELMono.otf` | PRIXEL Mono, by Andrew Bellamy / Otherwhere Collective for PRIXEL Press | **Non-commercial use only.** Redistribution not granted. |
+| `assets/mono-glyphs.json` | 120 outlines extracted from the supplied PRIXEL Mono font | Same non-commercial restriction as the font. |
+| `assets/negroni-glyphs.json` | Seven glyph outlines extracted from the supplied PRIXEL Mono font for the Negroni sample | Same non-commercial restriction as the font. |
 | `docs/prixel-datasheet.html` | Contains the **same font base64-embedded** in an `@font-face` data URI | Same restriction — this is a *second* copy of the font. |
 | `reference/PRIXEL_Idea_Book_2024.pdf` | PRIXEL's 20-page product book | © PRIXEL Press LLC. Vendored verbatim for private reference. |
 | `reference/prixel_mono_booklet_-_download.pdf` | PRIXEL Mono type specimen | © PRIXEL Press LLC. |

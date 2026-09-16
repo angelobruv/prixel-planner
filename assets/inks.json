@@ -1,6 +1,6 @@
 {
-  "_source": "https://www.tsukineko.co.jp/en/products/versa-color-series/ (fetched 2026-09-13)",
-  "_warning": "No official hex values are published. pad_sample_hex was sampled by us from prixel.com pad product photos \u2014 it is the PAD SURFACE under studio lighting, NOT a printed impression. printed_hex is null until measured from a real stamped swatch.",
+  "_source": "https://www.tsukineko.co.jp/en/products/versa-color-series/ (fetched 2026-09-13) | vendor_hex from the color-swatch CSS on the same page (fetched 2026-09-14).",
+  "_warning": "No MEASURED colour data exists. vendor_hex is Tsukineko's published swatch from their series page \u2014 a brand representation, not a measurement (White is #ffffff and Black is #000000, which no pigment ink achieves). pad_sample_hex was sampled by us from prixel.com pad photos: a real pad, but under studio lighting. printed_hex stays null until a real stamped swatch is measured; that is the only trustworthy value and the swatch-card protocol in docs/colour-system.md produces it.",
   "line": "Tsukineko VersaColor",
   "chemistry": "water-based pigment, opaque, high saturation. Metallics (091-094) are OIL-based \u2014 do not mix with the water-based colours.",
   "drying_minutes": [
@@ -72,7 +72,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#fed201",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#ffda00"
     },
     {
       "code": "012",
@@ -83,7 +84,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#f8b616"
     },
     {
       "code": "013",
@@ -94,7 +96,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#fc4705",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#f08300"
     },
     {
       "code": "014",
@@ -105,7 +108,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#e92b36",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#e83836"
     },
     {
       "code": "015",
@@ -116,7 +120,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#e4007f"
     },
     {
       "code": "016",
@@ -127,7 +132,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#b71a86"
     },
     {
       "code": "017",
@@ -138,7 +144,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#573582",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#7d4698"
     },
     {
       "code": "018",
@@ -149,7 +156,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#283da1",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#0058a8"
     },
     {
       "code": "019",
@@ -160,7 +168,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#0484d6",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#0090d5"
     },
     {
       "code": "020",
@@ -171,7 +180,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#0391a2",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#009bb4"
     },
     {
       "code": "021",
@@ -182,7 +192,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#035543",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#009375"
     },
     {
       "code": "022",
@@ -193,7 +204,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#05ae34",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#6cbb5a"
     },
     {
       "code": "023",
@@ -204,7 +216,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#dc007f"
     },
     {
       "code": "024",
@@ -215,7 +228,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#ef3580",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#d40080"
     },
     {
       "code": "025",
@@ -226,7 +240,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#c02b30"
     },
     {
       "code": "026",
@@ -237,7 +252,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#771183"
     },
     {
       "code": "027",
@@ -248,7 +264,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#003477"
     },
     {
       "code": "028",
@@ -259,7 +276,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#007f7d"
     },
     {
       "code": "029",
@@ -270,7 +288,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#006c4e"
     },
     {
       "code": "031",
@@ -303,7 +322,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#eb6ea0"
     },
     {
       "code": "034",
@@ -314,7 +334,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#e578ac"
     },
     {
       "code": "035",
@@ -325,7 +346,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#d8a0c7"
     },
     {
       "code": "036",
@@ -336,7 +358,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#9997c9"
     },
     {
       "code": "037",
@@ -347,7 +370,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#5976ba"
     },
     {
       "code": "038",
@@ -358,7 +382,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#7ecef4"
     },
     {
       "code": "040",
@@ -369,7 +394,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#31b6a0"
     },
     {
       "code": "041",
@@ -391,7 +417,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#c4d70f"
     },
     {
       "code": "052",
@@ -402,7 +429,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#d17a00"
     },
     {
       "code": "053",
@@ -413,7 +441,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#bd9583"
     },
     {
       "code": "054",
@@ -424,7 +453,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#57373b",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#6b3c30"
     },
     {
       "code": "055",
@@ -435,7 +465,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#927d6f"
     },
     {
       "code": "056",
@@ -446,7 +477,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#f6bba7"
     },
     {
       "code": "057",
@@ -457,7 +489,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#e5a7a8"
     },
     {
       "code": "058",
@@ -468,7 +501,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#9da9ce"
     },
     {
       "code": "060",
@@ -479,7 +513,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#90c9b9"
     },
     {
       "code": "061",
@@ -490,7 +525,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#00652f"
     },
     {
       "code": "063",
@@ -501,7 +537,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#f5e300"
     },
     {
       "code": "064",
@@ -512,7 +549,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#c7a700"
     },
     {
       "code": "066",
@@ -523,7 +561,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#960022"
     },
     {
       "code": "068",
@@ -534,7 +573,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#428ac4"
     },
     {
       "code": "069",
@@ -545,7 +585,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#928400"
     },
     {
       "code": "080",
@@ -556,7 +597,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#ffffff"
     },
     {
       "code": "081",
@@ -567,7 +609,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#afc4d0"
     },
     {
       "code": "082",
@@ -578,7 +621,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": "#26262f",
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#000000"
     },
     {
       "code": "083",
@@ -589,7 +633,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#c9c8bd"
     },
     {
       "code": "091",
@@ -600,7 +645,8 @@
       "base": "oil",
       "metallic": true,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#d0b87e"
     },
     {
       "code": "092",
@@ -611,7 +657,8 @@
       "base": "oil",
       "metallic": true,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#aeb0ad"
     },
     {
       "code": "093",
@@ -622,7 +669,8 @@
       "base": "oil",
       "metallic": true,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#ad7d4b"
     },
     {
       "code": "094",
@@ -633,7 +681,8 @@
       "base": "oil",
       "metallic": true,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#a86d54"
     },
     {
       "code": "101",
@@ -644,7 +693,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#e72741"
     },
     {
       "code": "103",
@@ -655,7 +705,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#17288b"
     },
     {
       "code": "104",
@@ -666,7 +717,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#009ccc"
     },
     {
       "code": "105",
@@ -677,7 +729,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#009c7c"
     },
     {
       "code": "121",
@@ -699,7 +752,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#fffbc7"
     },
     {
       "code": "133",
@@ -710,7 +764,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#fce4df"
     },
     {
       "code": "134",
@@ -721,7 +776,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#fadcea"
     },
     {
       "code": "135",
@@ -732,7 +788,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#e7d5e8"
     },
     {
       "code": "136",
@@ -743,7 +800,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#bbd4ef"
     },
     {
       "code": "137",
@@ -765,7 +823,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#bbe2f1"
     },
     {
       "code": "151",
@@ -776,7 +835,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#ebcbab"
     },
     {
       "code": "152",
@@ -787,7 +847,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#e1a3c7"
     },
     {
       "code": "154",
@@ -798,7 +859,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#964f00"
     },
     {
       "code": "155",
@@ -809,7 +871,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#e97f00"
     },
     {
       "code": "156",
@@ -820,7 +883,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#ad3169"
     },
     {
       "code": "157",
@@ -831,7 +895,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#922088"
     },
     {
       "code": "158",
@@ -842,7 +907,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#0060a5"
     },
     {
       "code": "159",
@@ -853,7 +919,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#007ba7"
     },
     {
       "code": "160",
@@ -864,7 +931,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#008a7b"
     },
     {
       "code": "161",
@@ -875,7 +943,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#82a70b"
     },
     {
       "code": "171",
@@ -886,7 +955,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#2e2124"
     },
     {
       "code": "172",
@@ -897,7 +967,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#6c255e"
     },
     {
       "code": "173",
@@ -908,7 +979,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#001659"
     },
     {
       "code": "174",
@@ -919,7 +991,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#554943"
     },
     {
       "code": "181",
@@ -930,7 +1003,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#f6f1d6"
     },
     {
       "code": "182",
@@ -941,7 +1015,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#feedcd"
     },
     {
       "code": "183",
@@ -952,7 +1027,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#c0bab7"
     },
     {
       "code": "184",
@@ -963,7 +1039,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#bc8fa2"
     },
     {
       "code": "185",
@@ -974,7 +1051,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#a4c1d0"
     },
     {
       "code": "186",
@@ -985,7 +1063,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#b3cfd0"
     },
     {
       "code": "187",
@@ -996,7 +1075,8 @@
       "base": "water",
       "metallic": false,
       "pad_sample_hex": null,
-      "printed_hex": null
+      "printed_hex": null,
+      "vendor_hex": "#c2d38c"
     }
   ]
 }

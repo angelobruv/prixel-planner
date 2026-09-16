@@ -1,0 +1,9 @@
+# Keep vendor copyright off the server — it is reference material, not app input.
+reference/
+docs/
+scripts/
+tests/
+*.md
+.context/
+node_modules/
+dist/

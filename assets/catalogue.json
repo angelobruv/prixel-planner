@@ -9,7 +9,59 @@
     ],
     "corner_holes_removed_per_corner": 3,
     "corner_cutout_shape": "inferred-L-triomino-UNVERIFIED",
-    "usable_cells": 372
+    "usable_cells": 372,
+    "id": "prixel-24x16",
+    "version": 1,
+    "blocked_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        23,
+        0
+      ],
+      [
+        22,
+        0
+      ],
+      [
+        23,
+        1
+      ],
+      [
+        0,
+        15
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        23,
+        15
+      ],
+      [
+        22,
+        15
+      ],
+      [
+        23,
+        14
+      ]
+    ]
   },
   "pieces": [
     {
@@ -23,7 +75,14 @@
       "fill": "#fcee21",
       "viewBox": "0 0 14.1732 14.1732",
       "svg": "PX-001-1x1-square.svg",
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "family": "Square",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-002",
@@ -36,7 +95,18 @@
       "fill": "#fcee21",
       "viewBox": "0 0 28.3465 14.1732",
       "svg": "PX-002-1x2-rectangle.svg",
-      "size_label": "1x2"
+      "size_label": "1x2",
+      "family": "Square",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-003",
@@ -49,7 +119,26 @@
       "fill": "#fcee21",
       "viewBox": "0 0 28.3465 28.3465",
       "svg": "PX-003-2x2-square.svg",
-      "size_label": "2x2"
+      "size_label": "2x2",
+      "family": "Square",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
     },
     {
       "code": "PX-004",
@@ -62,7 +151,26 @@
       "fill": "#fcee21",
       "viewBox": "0 0 56.6929 14.1732",
       "svg": "PX-004-1x4-rectangle.svg",
-      "size_label": "1x4"
+      "size_label": "1x4",
+      "family": "Square",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-010",
@@ -75,7 +183,14 @@
       "fill": "#3fa9f5",
       "viewBox": "0 0 14.1732 14.1732",
       "svg": "PX-010-1x1-quarter-circle.svg",
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "family": "Circle & Arc",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-011",
@@ -88,7 +203,18 @@
       "fill": "#3fa9f5",
       "viewBox": "0 0 28.3465 14.1732",
       "svg": "PX-011-1x2-half-circle.svg",
-      "size_label": "1x2"
+      "size_label": "1x2",
+      "family": "Circle & Arc",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-012",
@@ -101,7 +227,26 @@
       "fill": "#3fa9f5",
       "viewBox": "0 0 28.3465 28.3465",
       "svg": "PX-012-2x2-quarter-circle.svg",
-      "size_label": "2x2"
+      "size_label": "2x2",
+      "family": "Circle & Arc",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
     },
     {
       "code": "PX-013",
@@ -114,7 +259,14 @@
       "fill": "#99d9e8",
       "viewBox": "0 0 14.17323 14.17323",
       "svg": "PX-013-1x1-inverted-quarter-circle.svg",
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "family": "Inverted Circle",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-014",
@@ -128,7 +280,18 @@
       "viewBox": "0 0 28.34646 14.17323",
       "svg": "PX-014-1x2-inverted-half-circle.svg",
       "size_label": "1x2",
-      "name_expansion_page": "inverted quarter circle"
+      "name_expansion_page": "inverted quarter circle",
+      "family": "Inverted Circle",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-015",
@@ -141,7 +304,26 @@
       "fill": "#99d9e8",
       "viewBox": "0 0 28.34646 28.34646",
       "svg": "PX-015-2x2-inverted-quarter-circle.svg",
-      "size_label": "2x2"
+      "size_label": "2x2",
+      "family": "Inverted Circle",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
     },
     {
       "code": "PX-016",
@@ -154,7 +336,26 @@
       "fill": "#3fa9f5",
       "viewBox": "0 0 28.3465 28.3465",
       "svg": "PX-016-2x2-arc.svg",
-      "size_label": "2x2"
+      "size_label": "2x2",
+      "family": "Circle & Arc",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
     },
     {
       "code": "PX-017",
@@ -167,7 +368,46 @@
       "fill": "#3fa9f5",
       "viewBox": "0 0 42.5197 42.5197",
       "svg": "PX-017-3x3-arc.svg",
-      "size_label": "3x3"
+      "size_label": "3x3",
+      "family": "Circle & Arc",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ]
     },
     {
       "code": "PX-033",
@@ -181,7 +421,34 @@
       "viewBox": "0 0 42.51969 28.34646",
       "svg": "PX-033-2x3-arc-U.svg",
       "size_label": "2x3",
-      "name_expansion_page": "solid arc \"U\""
+      "name_expansion_page": "solid arc \"U\"",
+      "family": "Circle & Arc",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
     },
     {
       "code": "PX-034",
@@ -195,7 +462,34 @@
       "viewBox": "0 0 42.51969 28.34646",
       "svg": "PX-034-2x3-arc-Y.svg",
       "size_label": "2x3",
-      "name_expansion_page": "solid arc \"Y\""
+      "name_expansion_page": "solid arc \"Y\"",
+      "family": "Circle & Arc",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
     },
     {
       "code": "PX-008",
@@ -208,7 +502,14 @@
       "fill": "#3fa9f5",
       "viewBox": "0 0 14.1732 14.1732",
       "svg": "PX-008-1x1-circle.svg",
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "family": "Circle & Arc",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-009",
@@ -221,7 +522,26 @@
       "fill": "#3fa9f5",
       "viewBox": "0 0 28.3465 28.3465",
       "svg": "PX-009-2x2-circle.svg",
-      "size_label": "2x2"
+      "size_label": "2x2",
+      "family": "Circle & Arc",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
     },
     {
       "code": "PX-005",
@@ -234,7 +554,14 @@
       "fill": "#ff1d25",
       "viewBox": "0 0 14.1732 14.1732",
       "svg": "PX-005-1x1-right-triangle.svg",
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "family": "Triangle",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-006",
@@ -247,7 +574,18 @@
       "fill": "#ff1d25",
       "viewBox": "0 0 28.3465 14.1732",
       "svg": "PX-006-1x2-right-triangle.svg",
-      "size_label": "1x2"
+      "size_label": "1x2",
+      "family": "Triangle",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-007",
@@ -260,7 +598,26 @@
       "fill": "#ff1d25",
       "viewBox": "0 0 28.3465 28.3465",
       "svg": "PX-007-2x2-right-triangle.svg",
-      "size_label": "2x2"
+      "size_label": "2x2",
+      "family": "Triangle",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
     },
     {
       "code": "PX-018",
@@ -273,7 +630,14 @@
       "fill": "#7ac943",
       "viewBox": "0 0 14.1732 14.1732",
       "svg": "PX-018-1x1-straight-line.svg",
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "family": "Straight Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-029",
@@ -286,7 +650,14 @@
       "fill": "#7ebe5e",
       "viewBox": "0 0 14.17323 14.17323",
       "svg": "PX-029-1x1-straight-line-corner.svg",
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "family": "Straight Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-019",
@@ -299,7 +670,18 @@
       "fill": "#7ac943",
       "viewBox": "0 0 28.3465 14.1732",
       "svg": "PX-019-1x2-straight-line.svg",
-      "size_label": "1x2"
+      "size_label": "1x2",
+      "family": "Straight Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-020",
@@ -312,7 +694,26 @@
       "fill": "#7ac943",
       "viewBox": "0 0 56.6929 14.1732",
       "svg": "PX-020-1x4-straight-line.svg",
-      "size_label": "1x4"
+      "size_label": "1x4",
+      "family": "Straight Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-026",
@@ -326,7 +727,14 @@
       "viewBox": "0 0 14.17323 14.17323",
       "svg": "PX-026-1x1-quarter-circle-line.svg",
       "size_label": "1x1",
-      "name_expansion_page": "arc line"
+      "name_expansion_page": "arc line",
+      "family": "Circle & Arc Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-027",
@@ -340,7 +748,18 @@
       "viewBox": "0 0 28.34646 14.17323",
       "svg": "PX-027-1x2-half-circle-line.svg",
       "size_label": "1x2",
-      "name_expansion_page": "arc line"
+      "name_expansion_page": "arc line",
+      "family": "Circle & Arc Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-028",
@@ -354,7 +773,26 @@
       "viewBox": "0 0 28.34646 28.34646",
       "svg": "PX-028-2x2-quarter-circle-line.svg",
       "size_label": "2x2",
-      "name_expansion_page": "arc line"
+      "name_expansion_page": "arc line",
+      "family": "Circle & Arc Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
     },
     {
       "code": "PX-021",
@@ -367,7 +805,14 @@
       "fill": "#459261",
       "viewBox": "0 0 14.17323 14.17323",
       "svg": "PX-021-1x1-diagonal-line.svg",
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "family": "Diagonal Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-022",
@@ -381,7 +826,18 @@
       "viewBox": "0 0 28.34646 14.17323",
       "svg": "PX-022-1x2-diagonal-line-chevron.svg",
       "size_label": "1x2",
-      "name_expansion_page": "diagonal line"
+      "name_expansion_page": "diagonal line",
+      "family": "Diagonal Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-023",
@@ -394,7 +850,26 @@
       "fill": "#459261",
       "viewBox": "0 0 28.34646 28.34646",
       "svg": "PX-023-2x2-diagonal-line.svg",
-      "size_label": "2x2"
+      "size_label": "2x2",
+      "family": "Diagonal Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
     },
     {
       "code": "PX-024",
@@ -408,7 +883,14 @@
       "viewBox": "0 0 14.17323 14.17323",
       "svg": "PX-024-1x1-circle-line.svg",
       "size_label": "1x1",
-      "name_expansion_page": "lined circle"
+      "name_expansion_page": "lined circle",
+      "family": "Circle & Arc Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-025",
@@ -422,7 +904,26 @@
       "viewBox": "0 0 28.34646 28.34646",
       "svg": "PX-025-2x2-circle-line.svg",
       "size_label": "2x2",
-      "name_expansion_page": "lined circle"
+      "name_expansion_page": "lined circle",
+      "family": "Circle & Arc Line",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
     },
     {
       "code": "PX-030",
@@ -435,7 +936,14 @@
       "fill": null,
       "viewBox": null,
       "svg": null,
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "family": "Circle & Arc",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-031",
@@ -448,7 +956,14 @@
       "fill": null,
       "viewBox": null,
       "svg": null,
-      "size_label": "1x1"
+      "size_label": "1x1",
+      "family": "Triangle",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
       "code": "PX-032",
@@ -461,7 +976,26 @@
       "fill": null,
       "viewBox": null,
       "svg": null,
-      "size_label": "2x2"
+      "size_label": "2x2",
+      "family": "Triangle",
+      "footprint_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
     }
   ],
   "notation": "Vendor size labels are HEIGHT x WIDTH in cells (a '1x4' is 4 cells wide, 1 tall). Verified against every shipped SVG viewBox.",
@@ -474,6 +1008,7 @@
     "hxw_notation": "verified \u2014 against the viewBox of all 31 shipped SVGs",
     "corner_cutout_shape": "UNCONFIRMED \u2014 vendor states '3 holes in each corner'; the L-triomino arrangement is INFERRED from a product photo and has not been measured. Keep the blocked-cell mask config-driven.",
     "kit_piece_count": "316 is the sum of the vendor's own quantity column, re-added by hand. The vendor headline says 310. Treat counts as user-editable.",
-    "press_outer_size": "VENDOR CONTRADICTION \u2014 the page states '6\" x 4\" (17cm x 10cm)', but 6x4in is 15.2x10.2cm. Unresolved; do not rely on either without measuring."
+    "press_outer_size": "VENDOR CONTRADICTION \u2014 the page states '6\" x 4\" (17cm x 10cm)', but 6x4in is 15.2x10.2cm. Unresolved; do not rely on either without measuring.",
+    "footprint_cells": "UNCONFIRMED rectangular footprints, pending physical measurement. Ink geometry is not mounting geometry."
   }
 }

@@ -89,21 +89,26 @@ already authored at real scale — `width="5mm"`, `viewBox="0 0 14.1732 14.1732"
 
 ## PRIXEL Mono (the font set)
 
-- Physical set: **324 characters**, $25, SKU `850051128372`. Every glyph is **1×1** —
-  one 5 mm cell — designed to be rotated and stacked alongside shapes.
-- Digital `.otf` in `assets/fonts/PRIXELMono.otf` — name "PRIXEL Mono 2026", v2.000,
-  1000 upm, cap height 600, ascender 800 / descender -200.
-  **Monospaced at 1000 for 270 of 273 glyphs.** Three are zero-advance: the two
-  combining marks (U+0300, U+0302 — correct) and **`|` U+007C, which is a plain
-  printable ASCII glyph with advance 0 — a font defect.** Text layout must special-case it.
-  273 glyphs, **123 mapped codepoints**.
-- Charset: ASCII (no `%`, `<`, `>`, `` ` ``, `{}`, `~`, and **uppercase + lowercase are
-  separate**), plus `¡ £ ¥ · ¿ Ç × ß ç`, combining accents, curly quotes, en/em dash,
-  `• €`, the 8 arrows `← ↑ → ↓ ↖ ↗ ↘ ↙`, box-drawing `⎸ ⎹ ⎺ ⎽`, and `☆ ♡ ⚪ ⚫`.
-- 324 physical pieces vs 123 codepoints ⇒ the set carries **duplicates of common letters**.
-  Per-character counts aren't published — make them editable.
+- Physical set: **324 stated pieces, 323 counted** across 56 physical pools in
+  `assets/mono-case.json`, transcribed from the specimen booklet's INVENTORY page.
+  Counts are editable; the one-piece discrepancy remains unresolved.
+- `assets/mono-glyphs.json` supplies 120 outlines in the same coordinate space as
+  shapes: 14.1732 units per 5 mm cell, y down, origin at the cell top-left.
+  Every physical piece occupies one cell. Seventeen outlines are digital-only
+  (`printable:false`) and must be refused for physical composition.
+- The font is **unicase**: all 26 lowercase outlines match their capitals.
+  Inventory follows `case_group`, not codepoint. C/U, H/I, M/W, N/Z, O/0, 6/9,
+  quotes, colon/diaeresis, parentheses and rotated arrows share physical pools.
+  MINIMUM consumes three M/W pieces, two H/I, one N/Z and one C/U.
+- Diacritics occupy the cell above the letter. Grave, circumflex and tilde each
+  have two pieces. Diaeresis uses the colon pool. There is no acute piece:
+  U+2019 is a four-piece shared quote-pool substitute, printing noticeably high
+  at 4.1 mm above the letter versus 2.0 mm for grave. Ç/ç is a dedicated piece.
+- Text layout is limited to 24 columns and 16 rows including accent rows, with
+  actual visible plate bounds also enforced. Spaces consume cells but no pieces.
+- Digital `.otf` in `assets/fonts/PRIXELMono.otf` is retained as reference;
+  physical availability and layout follow the supplied glyph and case JSONs.
 - Designed with Andrew Bellamy / Otherwhere Collective. **Licence: non-commercial use only.**
-- Deliberate substitutions are designed in (M↔W etc.) — the planner should suggest them.
 
 ## Local reference files
 
@@ -123,7 +128,7 @@ Procreate (つか / レゴ版画).
 
 - Exact corner cut-out shape — "3 holes per corner" is the vendor's wording; the plate photo
   reads as an L-triomino at each corner. Measure the real plate before locking the mask.
-- Per-character counts in the Mono set.
+- The 323 counted vs 324 stated Mono pieces.
 - Whether 310 or 316 is the true kit count.
 
 Sources: [kit](https://prixel.com/products/the-prixel-printing-kit) ·
