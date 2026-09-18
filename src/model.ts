@@ -8,6 +8,18 @@ export const MONO = MONO_PIECES
 export const PIECES = [...CATALOGUE.pieces, ...MONO]
 export const INVENTORY_ITEMS = [...CATALOGUE.pieces, ...MONO_INVENTORY]
 export const BY_SKU = Object.fromEntries([...PIECES, ...MONO_INVENTORY].map(p => [p.code, p]))
+/** The colour a piece is physically moulded in — its sort bin in the box.
+ *  Nothing to do with the ink it prints: a scarlet pass is built from yellow
+ *  squares, blue arcs and near-black type. Three SKUs carry no fill of their
+ *  own, so the first fill declared for their family stands in. */
+const UNSORTED_BIN = '#8c8375'
+const FAMILY_FILL: Record<string, string> = {}
+for (const p of PIECES) if (p.family && p.fill && !FAMILY_FILL[p.family]) FAMILY_FILL[p.family] = p.fill
+export function binHex(sku: string): string {
+  const p = BY_SKU[sku]
+  return p?.fill ?? (p?.family ? FAMILY_FILL[p.family] : undefined) ?? UNSORTED_BIN
+}
+
 export const inventoryKey = (sku: string) => BY_SKU[sku]?.inventory_key ?? sku
 export const inventoryLabel = (sku: string) => BY_SKU[sku]?.glyph ? BY_SKU[sku].description : sku
 export const uid = () => crypto.randomUUID()

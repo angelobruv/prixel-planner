@@ -6,7 +6,7 @@ import type { TextOptions } from './text'
 import InkPicker from './InkPicker'
 import { layerInkHex } from './inks'
 import { artwork, artworkScale } from './art'
-import { BY_SKU, FAMILIES, GRID, INVENTORY_ITEMS, inventoryLabel, PIECES, attemptPlacement, attemptPlacements, blankProject, bounds, fromView, layerCounts, negroniProject, newLayer, occupied, parseProject, placementTransform, plateSize, plateTransform, remaining, requiredInventory, uid, validate } from './model'
+import { BY_SKU, FAMILIES, binHex, GRID, INVENTORY_ITEMS, inventoryLabel, PIECES, attemptPlacement, attemptPlacements, blankProject, bounds, fromView, layerCounts, negroniProject, newLayer, occupied, parseProject, placementTransform, plateSize, plateTransform, remaining, requiredInventory, uid, validate } from './model'
 import { createGroup, groupBounds, groupPlacements, importGroup, moveGroup, rotateGroup } from './groups'
 import type { PlacementGroup } from './groups'
 import { buildSheetHtml, download, fileStem, plateSvg, policyLabel } from './export'
@@ -26,6 +26,13 @@ function boot() {
   }
 }
 
+/** Paint one placement as the physical piece: its bin colour, outlined so a
+ *  yellow square reads on cream paper and two touching pieces stay separable.
+ *  Art scales itself down to cell units, which scales the stroke with it, so
+ *  the width is pre-divided to land at a constant .03 of a cell. */
+function pieceColours(sku: string) {
+  return { color: binHex(sku), stroke: '#3a342c', strokeWidth: .03 / artworkScale(sku), strokeLinejoin: 'round' as const }
+}
 function Art({ sku }: { sku: string }) {
   return <g transform={`scale(${artworkScale(sku)})`} dangerouslySetInnerHTML={{ __html: artwork(sku) }} />
 }
@@ -55,6 +62,9 @@ export default function App() {
   const busy = !!floating || !!pendingImport || !!textDraft
   const [mirror, setMirror] = useState(false)
   const [showGrid, setShowGrid] = useState(true)
+  // Build-sheet view is for setting the physical plate, so it defaults to the
+  // colours of the actual pieces. Untick to see the pass in its printing ink.
+  const [binView, setBinView] = useState(true)
   const [hidden, setHidden] = useState<string[]>([])
   const [tab, setTab] = useState<'pieces' | 'inventory'>('pieces')
   const [search, setSearch] = useState('')
@@ -388,7 +398,8 @@ export default function App() {
           <div className="group-actions"><button className="primary" onClick={finishGroup} disabled={!floatingResult?.project}>Place group <kbd>Enter</kbd></button><button data-cancel-group onClick={cancelGroup}>Cancel <kbd>Esc</kbd></button><span className={floatingResult?.project ? 'group-valid' : 'group-invalid'}>{floatingResult?.project ? 'Ready to place' : 'Cannot place'}</span></div>
         </section>}
         {!busy && !mirror && <div className="selection-tools"><span>Shift-click to select multiple pieces.</span><button onClick={() => { setSelectedIds(active.placements.map(p => p.id)); setSku(null) }} disabled={!active.placements.length}>Select all</button><button onClick={() => moveSelection()} disabled={!selectedPieces.length}>Move selection{selectedPieces.length ? ` (${selectedPieces.length})` : ''}</button></div>}
-        <div className="canvas-options"><span>{mirror ? `SETUP · ${active.name}` : 'PRINT PREVIEW'}<span className="subtle"> / {w * 5} × {h * 5} mm</span></span><label><input type="checkbox" checked={showGrid} onChange={e => setShowGrid(e.target.checked)} /> Grid</label></div>
+        <div className="canvas-options"><span>{mirror ? `SETUP · ${active.name}` : 'PRINT PREVIEW'}<span className="subtle"> / {w * 5} × {h * 5} mm</span></span><label><input type="checkbox" checked={showGrid} onChange={e => setShowGrid(e.target.checked)} /> Grid</label>{mirror && <label title="Show each piece in the colour it is moulded in, so you can pick it out of the box by sight.">
+          <input type="checkbox" checked={binView} onChange={e => setBinView(e.target.checked)} /> Piece colours</label>}</div>
         <div className={`stage ${d.orientation}`}>
           <div className="plate-wrap" style={{ '--plate-ratio': `${w} / ${h}` } as CSSProperties}>
             <div className="plate-label">{mirror ? '↑ TOP OF SETUP PLATE · MIRRORED' : '↑ TOP OF PRINT'}</div>
@@ -396,7 +407,7 @@ export default function App() {
               <svg ref={svgRef} className="plate" data-testid="plate" viewBox={`0 0 ${w} ${h}`} tabIndex={0} role="application" aria-label={`${mirror ? 'Mirrored build sheet' : 'Design plate'}, ${w} by ${h} cells. ${mirror ? 'Read only.' : 'Arrow keys move selected piece or cursor, Enter places, R rotates, Delete removes.'}`} onKeyDown={canvasKey} onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={pointerUp} onPointerCancel={pointerCancel} onPointerLeave={() => { if (!drag.current) setHover(null) }}>
                 <g transform={plateTransform(d, mirror)}>
                   {GRID.blocked_cells.map(([x,y]) => <g key={`${x},${y}`} pointerEvents="none"><rect x={x} y={y} width={1} height={1} fill="#cabfa8" fillOpacity={.5}/><path d={`M${x+.3},${y+.3}l.4,.4m0,-.4l-.4,.4`} stroke="#a69b83" strokeWidth={.045}/></g>)}
-                  {d.layers.filter(l => mirror ? l.id === active.id : !hidden.includes(l.id)).map(layer => <g key={layer.id} color={layerInkHex(layer)} pointerEvents="none">{layer.placements.filter(p => !floating?.replaceIds.includes(p.id)).map(p => <g key={p.id} transform={placementTransform(p)}><Art sku={p.sku}/></g>)}</g>)}
+                  {d.layers.filter(l => mirror ? l.id === active.id : !hidden.includes(l.id)).map(layer => <g key={layer.id} color={layerInkHex(layer)} pointerEvents="none">{layer.placements.filter(p => !floating?.replaceIds.includes(p.id)).map(p => <g key={p.id} data-sku={p.sku} transform={placementTransform(p)} {...(mirror && binView ? pieceColours(p.sku) : null)}><Art sku={p.sku}/></g>)}</g>)}
                   {showGrid && <g stroke="#968a70" strokeOpacity={.23} strokeWidth={.018} pointerEvents="none">{Array.from({ length: GRID.cols + 1 }, (_,x) => <path key={`x${x}`} d={`M${x} 0V${GRID.rows}`}/>)}{Array.from({ length: GRID.rows + 1 }, (_,y) => <path key={`y${y}`} d={`M0 ${y}H${GRID.cols}`}/>)}</g>}
                   {!busy && !mirror && !hidden.includes(active.id) && active.placements.map(p => { const b = bounds(p); return <rect key={p.id} data-placement={p.id} x={p.col} y={p.row} width={b.w} height={b.h} fill="transparent" stroke={selectedIds.includes(p.id) ? '#284b48' : 'none'} strokeWidth={.08} strokeDasharray={selectedIds.includes(p.id) ? '.18 .1' : undefined} className="hit-target"/> })}
                   {!busy && !mirror && !selectedPieces.length && <rect className="keyboard-cursor" x={cursor[0]} y={cursor[1]} width={1} height={1} fill="none" stroke="#284b48" strokeWidth={.06} pointerEvents="none"/>}

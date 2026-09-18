@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { BY_SKU, GRID, PIECES, attemptPlacement, blankProject, bounds, fromView, negroniProject, occupied, parseProject, plateSize, requiredInventory, remaining, validate } from '../src/model'
+import { BY_SKU, GRID, PIECES, binHex, attemptPlacement, blankProject, bounds, fromView, negroniProject, occupied, parseProject, plateSize, requiredInventory, remaining, validate } from '../src/model'
 import { buildSheetHtml, plateSvg } from '../src/export'
 import { artwork } from '../src/art'
 import type { Placement, Rotation } from '../src/types'
@@ -126,5 +126,20 @@ describe('build exports', () => {
     expect(html).not.toContain('<img src=x')
     expect(html).not.toContain('<script')
     expect(html).toContain('width:50mm')
+  })
+})
+
+describe('binHex — the colour a piece is moulded in', () => {
+  it('reads the piece fill, which is not the ink', () => {
+    expect(binHex('PX-001')).toBe('#fcee21')   // Square bin, yellow
+    expect(binHex('PX-005')).toBe('#ff1d25')   // Triangle bin, red
+  })
+  it('falls back to the family for SKUs the catalogue leaves unfilled', () => {
+    const orphan = PIECES.find(p => p.family && !p.fill)
+    if (!orphan) return
+    expect(binHex(orphan.code)).toBe(PIECES.find(p => p.family === orphan.family && p.fill)!.fill)
+  })
+  it('gives type pieces their own near-black, not the pass ink', () => {
+    expect(binHex('MONO-A')).toBe('#30302c')
   })
 })
