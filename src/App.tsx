@@ -6,6 +6,8 @@ import type { TextOptions } from './text'
 import InkPicker from './InkPicker'
 import { layerInkHex } from './inks'
 import { artwork, artworkScale } from './art'
+import { useTheme, THEME_LABEL } from './theme'
+import { ReferenceControls, ReferenceLayer, useReference } from './reference'
 import { BY_SKU, FAMILIES, binHex, GRID, INVENTORY_ITEMS, inventoryLabel, PIECES, attemptPlacement, attemptPlacements, blankProject, bounds, fromView, layerCounts, negroniProject, newLayer, occupied, parseProject, placementTransform, plateSize, plateTransform, remaining, requiredInventory, uid, validate } from './model'
 import { createGroup, groupBounds, groupPlacements, importGroup, moveGroup, rotateGroup } from './groups'
 import type { PlacementGroup } from './groups'
@@ -72,6 +74,9 @@ export default function App() {
   const [cursor, setCursor] = useState<[number, number]>([2, 2])
   const [dragPreview, setDragPreview] = useState<Placement | null>(null)
   const svgRef = useRef<SVGSVGElement>(null)
+  const imageRef = useRef<HTMLInputElement>(null)
+  const { theme, next: nextTheme, cycle: cycleTheme } = useTheme()
+  const reference = useReference(setNotice)
   const fileRef = useRef<HTMLInputElement>(null)
   const drag = useRef<{ p: Placement; dx: number; dy: number; x: number; y: number; moved: boolean } | null>(null)
   const groupDrag = useRef<{ start: PlacementGroup; col: number; row: number; x: number; y: number; moved: boolean } | null>(null)
@@ -353,7 +358,7 @@ export default function App() {
     <header className="app-header" inert={busy}>
       <a className="wordmark" href="#" onClick={e => e.preventDefault()} aria-label="PRIXEL Planner home"><span className="brand-grid" aria-hidden="true">▦</span>PRIXEL<span className="wordmark-sub">PLANNER</span></a>
       <div className="project-heading"><input aria-label="Design name" maxLength={150} value={d.name} onChange={e => setDesign('name', e.target.value)} /><span className={saveBlocked ? 'save-error' : ''}>{saveStatus}</span></div>
-      <nav aria-label="Project actions"><button onClick={newProject}>New</button><button onClick={() => fileRef.current?.click()}>Import</button><button onClick={() => download(JSON.stringify(project, null, 2), `${fileStem(d.name)}.json`, 'application/json')}>Save JSON</button><button className="primary" onClick={() => download(buildSheetHtml(project), `${fileStem(d.name)}-build-sheets.html`, 'text/html')}>Build sheets ↗</button></nav>
+      <nav aria-label="Project actions"><button className="theme-toggle" onClick={cycleTheme} aria-label={`Theme: ${THEME_LABEL[theme]}. Switch to ${THEME_LABEL[nextTheme]}.`} title={theme === 'auto' ? 'Following your system setting' : `${THEME_LABEL[theme]} theme`}><span aria-hidden="true">{theme === 'dark' ? '☾' : theme === 'light' ? '☀' : '◐'}</span>{THEME_LABEL[theme]}</button><button onClick={newProject}>New</button><button onClick={() => fileRef.current?.click()}>Import</button><button onClick={() => download(JSON.stringify(project, null, 2), `${fileStem(d.name)}.json`, 'application/json')}>Save JSON</button><button className="primary" onClick={() => download(buildSheetHtml(project), `${fileStem(d.name)}-build-sheets.html`, 'text/html')}>Build sheets ↗</button></nav>
       <input ref={fileRef} className="visually-hidden" type="file" accept=".json,application/json" onChange={e => void importFile(e.target.files?.[0])} aria-label="Import project JSON" />
     </header>
     {saveBlocked && <div className="recovery">{saveStatus} <button onClick={() => { setSaveBlocked(false); setSaveStatus('Saving…') }}>Resume autosave</button></div>}
@@ -399,12 +404,15 @@ export default function App() {
         </section>}
         {!busy && !mirror && <div className="selection-tools"><span>Shift-click to select multiple pieces.</span><button onClick={() => { setSelectedIds(active.placements.map(p => p.id)); setSku(null) }} disabled={!active.placements.length}>Select all</button><button onClick={() => moveSelection()} disabled={!selectedPieces.length}>Move selection{selectedPieces.length ? ` (${selectedPieces.length})` : ''}</button></div>}
         <div className="canvas-options"><span>{mirror ? `SETUP · ${active.name}` : 'PRINT PREVIEW'}<span className="subtle"> / {w * 5} × {h * 5} mm</span></span><label><input type="checkbox" checked={showGrid} onChange={e => setShowGrid(e.target.checked)} /> Grid</label>{mirror && <label title="Show each piece in the colour it is moulded in, so you can pick it out of the box by sight.">
-          <input type="checkbox" checked={binView} onChange={e => setBinView(e.target.checked)} /> Piece colours</label>}</div>
+          <input type="checkbox" checked={binView} onChange={e => setBinView(e.target.checked)} /> Piece colours</label>}{!mirror && !reference.ref && <button className="add-reference" onClick={() => imageRef.current?.click()} title="Put a picture behind the plate to trace over. It is never printed or exported.">Add reference image</button>}
+          <input ref={imageRef} className="visually-hidden" type="file" accept="image/*" aria-label="Choose a reference image" onChange={e => { void reference.add(e.target.files?.[0]); e.target.value = '' }} /></div>
+        {!mirror && reference.ref && <ReferenceControls reference={reference.ref} update={reference.update} remove={reference.remove} cols={w} rows={h} />}
         <div className={`stage ${d.orientation}`}>
           <div className="plate-wrap" style={{ '--plate-ratio': `${w} / ${h}` } as CSSProperties}>
             <div className="plate-label">{mirror ? '↑ TOP OF SETUP PLATE · MIRRORED' : '↑ TOP OF PRINT'}</div>
             <div className={`paper ${d.orientation === 'portrait' ? 'perforated' : ''}`} style={{ background: d.paperColor }}>
               <svg ref={svgRef} className="plate" data-testid="plate" viewBox={`0 0 ${w} ${h}`} tabIndex={0} role="application" aria-label={`${mirror ? 'Mirrored build sheet' : 'Design plate'}, ${w} by ${h} cells. ${mirror ? 'Read only.' : 'Arrow keys move selected piece or cursor, Enter places, R rotates, Delete removes.'}`} onKeyDown={canvasKey} onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={pointerUp} onPointerCancel={pointerCancel} onPointerLeave={() => { if (!drag.current) setHover(null) }}>
+                {!mirror && reference.ref && <ReferenceLayer reference={reference.ref} cols={w} rows={h} />}
                 <g transform={plateTransform(d, mirror)}>
                   {GRID.blocked_cells.map(([x,y]) => <g key={`${x},${y}`} pointerEvents="none"><rect x={x} y={y} width={1} height={1} fill="#cabfa8" fillOpacity={.5}/><path d={`M${x+.3},${y+.3}l.4,.4m0,-.4l-.4,.4`} stroke="#a69b83" strokeWidth={.045}/></g>)}
                   {d.layers.filter(l => mirror ? l.id === active.id : !hidden.includes(l.id)).map(layer => <g key={layer.id} color={layerInkHex(layer)} pointerEvents="none">{layer.placements.filter(p => !floating?.replaceIds.includes(p.id)).map(p => <g key={p.id} data-sku={p.sku} transform={placementTransform(p)} {...(mirror && binView ? pieceColours(p.sku) : null)}><Art sku={p.sku}/></g>)}</g>)}
