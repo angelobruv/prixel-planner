@@ -57,6 +57,9 @@ test.describe('reference image', () => {
     })
     expect(behind).toBe(true)
 
+    await expect(page.locator('output[for="ref-x"]')).toHaveText('0 cells')
+    await page.locator('#ref-x').fill('1')
+    await expect(page.locator('output[for="ref-x"]')).toHaveText('+1 cell')
     await page.locator('#ref-opacity').fill('0.8')
     await expect(img).toHaveAttribute('opacity', '0.8')
     const before = Number(await img.getAttribute('width'))
@@ -66,6 +69,7 @@ test.describe('reference image', () => {
 
     await page.getByRole('button', { name: 'Build sheet ⇄' }).click()
     await expect(img).toHaveCount(0)
+    await expect(page.locator('.feedback')).not.toContainText('Reference image added')
     await page.getByRole('button', { name: 'Design' }).click()
 
     await page.reload()

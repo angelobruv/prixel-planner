@@ -92,6 +92,9 @@ export function ReferenceLayer({ reference: r, cols, rows }: { reference: Refere
   </svg>
 }
 
+/** Offsets are in plate cells (5mm each) — say so, or "+2" means nothing. */
+const cells = (v: number) => `${v > 0 ? '+' : ''}${v} ${Math.abs(v) === 1 ? 'cell' : 'cells'}`
+
 export function ReferenceControls({ reference: r, update, remove, cols, rows }: {
   reference: Reference; update: (p: Partial<Reference>) => void; remove: () => void; cols: number; rows: number
 }) {
@@ -108,8 +111,8 @@ export function ReferenceControls({ reference: r, update, remove, cols, rows }: 
       onChange={e => update({ visible: e.target.checked })} /> Reference</label>
     {slider('ref-opacity', 'Opacity', r.opacity, 0.1, 1, 0.05, v => update({ opacity: v }), `${Math.round(r.opacity * 100)}%`)}
     {slider('ref-scale', 'Size', r.scale, 0.25, 3, 0.05, v => update({ scale: v }), `${Math.round(r.scale * 100)}%`)}
-    {slider('ref-x', 'Across', r.x, -cols, cols, 0.25, v => update({ x: v }), `${r.x > 0 ? '+' : ''}${r.x}`)}
-    {slider('ref-y', 'Down', r.y, -rows, rows, 0.25, v => update({ y: v }), `${r.y > 0 ? '+' : ''}${r.y}`)}
+    {slider('ref-x', 'Across', r.x, -cols, cols, 0.25, v => update({ x: v }), cells(r.x))}
+    {slider('ref-y', 'Down', r.y, -rows, rows, 0.25, v => update({ y: v }), cells(r.y))}
     <button onClick={() => update({ scale: 1, x: 0, y: 0 })} disabled={!r.visible}>Recentre</button>
     <button onClick={remove}>Remove image</button>
   </div>

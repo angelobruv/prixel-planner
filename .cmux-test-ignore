@@ -1,0 +1,4 @@
+# Chrome requests /favicon.ico on its own; the app ships no favicon, so Vite's
+# dev server answers 404. Dev-only: the production server falls back to
+# index.html (200). Pre-existing, unrelated to any UI change.
+Failed to load resource: the server responded with a status of 404 \(Not Found\)
