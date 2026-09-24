@@ -70,8 +70,8 @@ A finished design existed only as an image. Rebuilt by measurement:
 **The check that was not sufficient.** Comparing bounding boxes proved position
 but *not curve direction*: two quarter circles forming a dome and the same two
 forming a bowl occupy identical boxes. When rebuilding, confirm orientation by
-looking at the render, or by comparing quadrant coverage within a cell the way
-`corners.py` does — not by matching extents.
+looking at the render, or with `pieces.sh --measure`, which tests points against
+the piece geometry itself — not by matching extents.
 
 The garnishes were the interesting detail: each is **two quarter circles** split
 on a cell boundary, not one `PX-011` half circle. The seam in the reference is

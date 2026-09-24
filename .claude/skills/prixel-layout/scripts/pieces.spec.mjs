@@ -38,4 +38,39 @@ test('pieces', async ({ page }) => {
   </style>${html}`)
   await page.screenshot({ path: process.env.PRIXEL_OUT, fullPage: true })
   console.log('\n  wrote    ' + process.env.PRIXEL_OUT + '\n')
+  if (!process.env.PRIXEL_MEASURE) return
+
+  /* Which corner is solid, measured on the geometry itself: sample a grid over
+   * each rotated footprint and ask the browser whether each point is inside the
+   * piece's filled shape. No colours, no thumbnails — a pale or thin piece
+   * measures exactly as well as a bold one. */
+  const rows = await page.evaluate(() => [...document.querySelectorAll('section')].map(sec => {
+    const sku = sec.querySelector('h3').textContent.trim().split(' ')[0]
+    return { sku, rots: [...sec.querySelectorAll('.c svg')].map((svg, i) => {
+      const box = svg.getBoundingClientRect()
+      const shapes = [...svg.querySelectorAll('g[transform] path, g[transform] rect, g[transform] circle, g[transform] ellipse, g[transform] polygon')]
+      const q = { 'top-left': [0, 0], 'top-right': [0, 0], 'bottom-left': [0, 0], 'bottom-right': [0, 0] }
+      const N = 40
+      for (let yi = 0; yi < N; yi++) for (let xi = 0; xi < N; xi++) {
+        const x = box.left + (xi + .5) * box.width / N, y = box.top + (yi + .5) * box.height / N
+        const inside = shapes.some(el => {
+          const m = el.getScreenCTM(); if (!m) return false
+          const p = new DOMPoint(x, y).matrixTransform(m.inverse())
+          return el.isPointInFill(p)
+        })
+        const k = `${yi < N / 2 ? 'top' : 'bottom'}-${xi < N / 2 ? 'left' : 'right'}`
+        q[k][0] += inside ? 1 : 0; q[k][1] += 1
+      }
+      const cov = Object.fromEntries(Object.entries(q).map(([k, [a, b]]) => [k, a / b]))
+      return { rot: i * 90, cov }
+    }) }
+  }))
+  for (const { sku, rots } of rows) {
+    console.log(`${sku} — which corner the shape actually fills:`)
+    for (const { rot, cov } of rots) {
+      const order = Object.entries(cov).sort((a, b) => b[1] - a[1])
+      const [solid, sv] = order[0], [thin, tv] = order[order.length - 1]
+      console.log(`  r${String(rot).padEnd(4)} solid at ${solid.padEnd(13)} (${sv.toFixed(2)} covered)   thinnest ${thin} (${tv.toFixed(2)})`)
+    }
+  }
 })
