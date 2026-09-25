@@ -47,10 +47,11 @@ test('collision, corner rejection, inventory editing and unsupported shapes',asy
   await clickCell(page,3,5);await expect(page.getByRole('status')).toContainText('overlap');await count(page,1)
   await page.getByRole('button',{name:'Inventory',exact:true}).click()
   await page.getByLabel('Owned PX-001',{exact:true}).fill('1')
-  await page.getByLabel('Owned PX-030',{exact:true}).fill('12')
+  // Pieces with no artwork are not offered at all, in either tab.
+  await expect(page.getByLabel('Owned PX-030',{exact:true})).toHaveCount(0)
   await page.getByRole('button',{name:'Pieces',exact:true}).click()
   await expect(page.getByRole('button',{name:/PX-001 square, 0 remaining/})).toBeDisabled()
-  await expect(page.getByRole('button',{name:/PX-030 .* no artwork/})).toBeDisabled()
+  await expect(page.getByRole('button',{name:/PX-030/})).toHaveCount(0)
 })
 
 test('four-pass sample, policy switching, correct portrait display and safe exports',async({page})=>{
