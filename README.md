@@ -7,7 +7,7 @@ pieces you own, and print mirrored build sheets for setting the plate.
 Made by a PRIXEL owner, shared with PRIXEL's blessing. Not an official PRIXEL
 product.
 
-![An Espresso Martini laid out in the planner: four ink passes, the piece library on the left, and the plate preview in the middle](docs/screenshots/design.png)
+!["The Fitz" wordmark and a Negroni glass laid out in the planner: four ink passes, the piece library on the left, and the plate preview in the middle](docs/screenshots/design.png)
 
 <table>
 <tr>
