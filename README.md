@@ -7,6 +7,23 @@ pieces you own, and print mirrored build sheets for setting the plate.
 Made by a PRIXEL owner, shared with PRIXEL's blessing. Not an official PRIXEL
 product.
 
+![An Espresso Martini laid out in the planner: four ink passes, the piece library on the left, and the plate preview in the middle](docs/screenshots/design.png)
+
+<table>
+<tr>
+<td width="50%"><img src="docs/screenshots/build-sheet.png" alt="The build sheet view: the plate mirrored for setup, each piece shown in the colour it is moulded in"></td>
+<td width="50%"><img src="docs/screenshots/reference.png" alt="A reference picture faded behind the plate, with sliders for opacity, size and position"></td>
+</tr>
+<tr>
+<td><b>Build sheet.</b> The plate mirrored as you set it, with every piece in the colour it's moulded in, so you can find it in the box.</td>
+<td><b>Trace a reference.</b> Put a picture behind the plate, then fade, resize and move it. It's never printed or exported.</td>
+</tr>
+</table>
+
+![The planner in dark mode, showing an elephant in orange ink on black paper](docs/screenshots/dark.png)
+
+**Dark mode** follows your system, or pin Light or Dark. The paper keeps its true colour, because it's a print preview.
+
 ## Run
 
 Needs Node 20 or newer.
