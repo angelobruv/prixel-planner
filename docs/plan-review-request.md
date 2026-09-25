@@ -1,6 +1,6 @@
 Requesting your approval (or pushback) before I write any implementation code.
 
-You're in the same worktree: /Users/angelo/orca/workspaces/prixel-planner/init @ 1cbd7e4.
+You're in the same checkout @ 1cbd7e4.
 Read docs/prixel-spec.md and assets/catalogue.json first — that's the contract.
 
 ## Goal

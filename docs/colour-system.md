@@ -247,4 +247,4 @@ Sources: [VersaColor](https://www.tsukineko.co.jp/en/products/versa-color-series
 [Uninked Foam Pad](https://www.tsukineko.co.jp/en/products/uninked-foam-pad/) ·
 [spectral.js](https://github.com/rvanwijnen/spectral.js) ·
 [Mixbox licence](https://github.com/scrtwpns/mixbox) ·
-PRIXEL Idea Book p.6 (`reference/PRIXEL_Idea_Book_2024.pdf`) for the ink-type guidance.
+PRIXEL Idea Book p.6 (published by PRIXEL at prixel.com) for the ink-type guidance.

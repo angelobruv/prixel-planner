@@ -352,7 +352,10 @@ export default function App() {
   }
   const ghost: Placement | null = mirror || busy ? null : dragPreview ?? (sku ? { id: '__ghost__', sku, col: (hover ?? cursor)[0], row: (hover ?? cursor)[1], rotation } : null)
   const ghostValid = ghost ? !!attemptPlacement(project, active.id, ghost).project : true
-  const filtered = (tab === 'inventory' ? INVENTORY_ITEMS : PIECES.filter(p=>!p.glyph)).filter(p => `${p.code} ${p.description} ${p.family}`.toLowerCase().includes(search.toLowerCase()))
+  // PX-030/031/032 appear on PRIXEL's spec page, but the kit ships none and there
+  // is no artwork to draw them with. They stay in the catalogue, out of the library.
+  const drawable = (p: { code: string; svg: string | null }) => !p.code.startsWith('PX-') || !!p.svg
+  const filtered = (tab === 'inventory' ? INVENTORY_ITEMS : PIECES.filter(p=>!p.glyph)).filter(drawable).filter(p => `${p.code} ${p.description} ${p.family}`.toLowerCase().includes(search.toLowerCase()))
 
   return <div className="app">
     <header className="app-header" inert={busy}>

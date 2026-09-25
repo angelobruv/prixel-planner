@@ -8,3 +8,5 @@ playwright-report/
 .prixel-preview.png
 .prixel-pieces.png
 .cmux-verify/
+assets/mono-glyphs.json
+.vitest/

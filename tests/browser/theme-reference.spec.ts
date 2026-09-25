@@ -104,3 +104,12 @@ test('an enlarged reference is cropped to the paper', async ({ page }) => {
   expect([crop.w, crop.h]).toEqual([crop.plateW, crop.plateH])
   if (process.env.SHOT_DIR) await page.screenshot({ path: `${process.env.SHOT_DIR}/reference-cropped.png` })
 })
+
+test('pieces with no artwork are not offered', async ({ page }) => {
+  await page.goto('/')
+  for (const code of ['031', '032']) await expect(page.locator('.piece', { hasText: code })).toHaveCount(0)
+  await expect(page.getByText('No SVG')).toHaveCount(0)
+  await page.getByRole('button', { name: 'Inventory' }).click()
+  await expect(page.locator('.inventory-table').getByText('PX-031')).toHaveCount(0)
+  await expect(page.locator('.inventory-table').getByText('PX-001')).toHaveCount(1)
+})

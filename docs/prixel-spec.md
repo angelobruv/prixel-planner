@@ -1,8 +1,8 @@
 # PRIXEL — hardware spec (source of truth for the planner)
 
 Everything below is scraped from prixel.com (Sept 2026) plus the official Idea Book PDF,
-the Illustrator planning template, and the shipped `PRIXELMono.otf`. Local copies live in
-`reference/`; machine-readable piece data in `assets/catalogue.json`.
+the Illustrator planning template, and PRIXEL Mono. Those are PRIXEL's and are not
+redistributed here — get them from prixel.com. Machine-readable piece data is in `assets/catalogue.json`.
 
 ## The grid
 
@@ -106,7 +106,7 @@ already authored at real scale — `width="5mm"`, `viewBox="0 0 14.1732 14.1732"
   at 4.1 mm above the letter versus 2.0 mm for grave. Ç/ç is a dedicated piece.
 - Text layout is limited to 24 columns and 16 rows including accent rows, with
   actual visible plate bounds also enforced. Spaces consume cells but no pieces.
-- Digital `.otf` in `assets/fonts/PRIXELMono.otf` is retained as reference;
+- The digital font is not stored here: `scripts/build-mono-glyphs.mjs` downloads it from PRIXEL at build time.
   physical availability and layout follow the supplied glyph and case JSONs.
 - Designed with Andrew Bellamy / Otherwhere Collective. **Licence: non-commercial use only.**
 
@@ -114,10 +114,10 @@ already authored at real scale — `width="5mm"`, `viewBox="0 0 14.1732 14.1732"
 
 | File | What |
 |---|---|
-| `reference/PRIXEL_Idea_Book_2024.pdf` | 20-page official book — technique, colour groups, examples |
-| `reference/prixel_mono_booklet_-_download.pdf` | Mono type specimen + design rationale |
-| `reference/PRIXEL_planning_template_-_2025_Q1.ait` | Official Illustrator template (120×80 mm artboard) |
-| `reference/setup-plate.jpg` | Photo of the plate — shows corner magnet bosses |
+| PRIXEL Idea Book 2024 (prixel.com) | 20-page official book — technique, colour groups, examples |
+| PRIXEL Mono booklet (prixel.com) | Mono type specimen + design rationale |
+| PRIXEL planning template, 2025 Q1 (prixel.com) | Official Illustrator template (120×80 mm artboard) |
+| PRIXEL product photo of the setup plate | Photo of the plate — shows corner magnet bosses |
 | `assets/catalogue.json` | Machine-readable: grid + all 34 SKUs, cell dims, mm dims, qty, fill |
 
 Other planning templates exist but aren't vendored here:

@@ -1,9 +1,9 @@
 // Minimal static server with HTTP Basic Auth. Zero dependencies.
 //
-// This app embeds PRIXEL's shape artwork and outline data derived from
-// PRIXELMono.otf, whose licence excludes "storing on publicly available
-// servers". A password keeps it a private tool rather than a public one —
-// see NOTICE.md. Do not remove the auth gate.
+// A build of this app contains outline data generated from PRIXEL Mono,
+// whose licence excludes "storing on publicly available servers". The repo
+// holds none of it (see NOTICE.md), but a deployment does, so it sits behind
+// a password. Do not remove the auth gate from a public deployment.
 import { createServer } from 'node:http'
 import { readFile, stat } from 'node:fs/promises'
 import { extname, join, normalize } from 'node:path'

@@ -4,14 +4,17 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/build-mono-glyphs.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/build-mono-glyphs.mjs",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "check": "python3 scripts/check-consistency.py",
+    "pretest": "node scripts/build-mono-glyphs.mjs",
     "test": "vitest run",
     "test:browser": "playwright test",
-    "glyphs": "node scripts/extract-negroni.mjs",
-    "start": "node server.mjs"
+    "start": "node server.mjs",
+    "glyphs": "node scripts/build-mono-glyphs.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

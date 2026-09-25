@@ -1,18 +1,28 @@
 # PRIXEL planner
 
-A local workbench for the PRIXEL modular stamp kit. Compose with the vendor's
-artwork, check finite inventory, and prepare mirrored setup sheets.
+A workbench for the [PRIXEL](https://prixel.com) modular stamp kit. Lay out a
+design on the 24×16 plate, split it into ink passes, check it against the
+pieces you own, and print mirrored build sheets for setting the plate.
+
+Made by a PRIXEL owner, shared with PRIXEL's blessing. Not an official PRIXEL
+product.
 
 ## Run
+
+Needs Node 20 or newer.
 
 ```sh
 npm install
 npm run dev
 ```
 
-Open http://localhost:5173. Vite uses strict port 5173. Nothing is sent to a
-backend. Work stays in localStorage; use **Save JSON** for portable backups.
-No account, external fonts, analytics, or network services are used by the app.
+Open http://localhost:5173. The first `dev`, `build` or `test` downloads the
+PRIXEL Mono font from PRIXEL's own store and generates the letter outlines —
+the font is never stored in this repo (see `NOTICE.md`). After that it is
+cached and everything works offline.
+
+The app itself makes no network requests: no accounts, analytics or backend.
+Your work stays in the browser; use **Save JSON** to keep a copy.
 
 ## Compose
 

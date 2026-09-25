@@ -1,33 +1,21 @@
-# Third-party assets — read before making this repo public
+# Third-party material
 
-**This repository is private, and it must stay private in its current form.**
-It vendors copyrighted vendor material and a non-commercially-licensed font.
+The code in this repository is MIT-licensed (see `LICENSE`). Some of what the
+planner draws belongs to other people, and is used as described here.
 
-| Path | What | Licence / status |
+| What | Owner | How it is used |
 |---|---|---|
-| `assets/fonts/PRIXELMono.otf` | PRIXEL Mono, by Andrew Bellamy / Otherwhere Collective for PRIXEL Press | **Non-commercial use only.** Redistribution not granted. |
-| `assets/mono-glyphs.json` | 120 outlines extracted from the supplied PRIXEL Mono font | Same non-commercial restriction as the font. |
-| `assets/negroni-glyphs.json` | Seven glyph outlines extracted from the supplied PRIXEL Mono font for the Negroni sample | Same non-commercial restriction as the font. |
-| `docs/prixel-datasheet.html` | Contains the **same font base64-embedded** in an `@font-face` data URI | Same restriction — this is a *second* copy of the font. |
-| `reference/PRIXEL_Idea_Book_2024.pdf` | PRIXEL's 20-page product book | © PRIXEL Press LLC. Vendored verbatim for private reference. |
-| `reference/prixel_mono_booklet_-_download.pdf` | PRIXEL Mono type specimen | © PRIXEL Press LLC. |
-| `reference/PRIXEL_planning_template_-_2025_Q1.ait` | PRIXEL's Illustrator planning template | © PRIXEL Press LLC. |
-| `reference/setup-plate.jpg` | PRIXEL product photograph | © PRIXEL Press LLC. |
-| `assets/shapes/*.svg` (31 files) | PRIXEL's own shape artwork, from their product page | © PRIXEL Press LLC. Used here to avoid redrawing. |
-| `assets/inks.json` | Colour names/codes transcribed from tsukineko.co.jp | Factual data; names are Tsukineko's. |
+| `assets/shapes/*.svg` — the 31 piece outlines | © PRIXEL Press LLC | PRIXEL's own artwork, taken from their product page and included with PRIXEL's permission (September 2026). Not covered by the MIT licence. |
+| PRIXEL Mono typeface | © Otherwhere Collective and PRIXEL Press | **Not stored in this repository.** Its licence excludes storing it on public servers. `scripts/build-mono-glyphs.mjs` downloads it from PRIXEL's own store at build time and generates `assets/mono-glyphs.json` locally, which git ignores. |
+| `assets/mono-glyphs.meta.json` | This project | Character names, case groups and accent rules for the Mono pieces. No font outlines. |
+| `assets/inks.json` | Colour names are Tsukineko's | Factual data transcribed from tsukineko.co.jp. |
+| PRIXEL, PRIXEL Mono | Trademarks of PRIXEL Press LLC | Used to say what this planner is for. |
 
 PRIXEL is covered by US Patent 20230264503A1.
 
-## Before any public flip
+## If you deploy it
 
-1. Delete `reference/` entirely, and purge it from git history — it is ~13 MB of
-   vendor PDFs and a product photo.
-2. Delete `assets/fonts/PRIXELMono.otf` and purge from history.
-3. Regenerate `docs/prixel-datasheet.html` with font embedding disabled
-   (`python3 scripts/build-datasheet.py --no-embed-font`) — the committed version
-   carries the font inline.
-4. Decide on `assets/shapes/*.svg`. They are PRIXEL's artwork. Either seek
-   permission, or replace them with your own traced equivalents.
-
-Points 1 and 2 need history rewriting, not just a delete commit. Git does not
-forget.
+A build contains `mono-glyphs.json`, which is generated from PRIXEL Mono, so a
+public deployment would be storing font data on a public server. `server.mjs`
+puts the app behind a password (`SITE_PASSWORD`); keep it there, or run the
+planner locally.

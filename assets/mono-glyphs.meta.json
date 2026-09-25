@@ -1,0 +1,1045 @@
+{
+  "_what": "PRIXEL Mono glyph outlines, one per cell, for placing type on the plate.",
+  "_coords": "Paths are already in the same space as assets/shapes/*.svg: 14.1732 units per 5mm cell, y down, origin at the cell's top-left. Drop them in exactly like a shape piece.",
+  "_accents": "Diacritics are separate pieces that occupy the cell ABOVE the letter. There is NO acute; U+2019 (quote) is the stand-in - same mark, acute slope, but it sits 4.1mm above the letter against 2.0mm for a true grave.",
+  "_substitutions": "case_group names the PHYSICAL piece. Several serve two characters when rotated (C/U, H/I, M/W, N/Z, 6/9, quotes, colon/diaeresis), so inventory must be counted per GROUP, not per character.",
+  "_source": "Outlines are generated at build time from PRIXEL's published PRIXEL Mono font by scripts/build-mono-glyphs.mjs; this file holds only the non-font data. The font is © Otherwhere Collective and PRIXEL Press and is not stored in this repository.",
+  "cell_units": 14.1732,
+  "count": 120,
+  "glyphs": {
+    "U+0021": {
+      "char": "!",
+      "name": "EXCLAMATION MARK",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "!¡"
+    },
+    "U+0022": {
+      "char": "\"",
+      "name": "QUOTATION MARK",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "'’",
+      "note": "the '’ piece, rotated"
+    },
+    "U+0023": {
+      "char": "#",
+      "name": "NUMBER SIGN",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "#"
+    },
+    "U+0024": {
+      "char": "$",
+      "name": "DOLLAR SIGN",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "$"
+    },
+    "U+0026": {
+      "char": "&",
+      "name": "AMPERSAND",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "&"
+    },
+    "U+0027": {
+      "char": "'",
+      "name": "APOSTROPHE",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "'’"
+    },
+    "U+0028": {
+      "char": "(",
+      "name": "LEFT PARENTHESIS",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "("
+    },
+    "U+0029": {
+      "char": ")",
+      "name": "RIGHT PARENTHESIS",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "(",
+      "note": "the ( piece, rotated"
+    },
+    "U+002A": {
+      "char": "*",
+      "name": "ASTERISK",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "*"
+    },
+    "U+002B": {
+      "char": "+",
+      "name": "PLUS SIGN",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "+"
+    },
+    "U+002C": {
+      "char": ",",
+      "name": "COMMA",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+002D": {
+      "char": "-",
+      "name": "HYPHEN-MINUS",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "-"
+    },
+    "U+002E": {
+      "char": ".",
+      "name": "FULL STOP",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "."
+    },
+    "U+002F": {
+      "char": "/",
+      "name": "SOLIDUS",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "/"
+    },
+    "U+0030": {
+      "char": "0",
+      "name": "DIGIT ZERO",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "OO",
+      "note": "the OO piece, rotated"
+    },
+    "U+0031": {
+      "char": "1",
+      "name": "DIGIT ONE",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "1"
+    },
+    "U+0032": {
+      "char": "2",
+      "name": "DIGIT TWO",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "2"
+    },
+    "U+0033": {
+      "char": "3",
+      "name": "DIGIT THREE",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "3"
+    },
+    "U+0034": {
+      "char": "4",
+      "name": "DIGIT FOUR",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "4"
+    },
+    "U+0035": {
+      "char": "5",
+      "name": "DIGIT FIVE",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "5"
+    },
+    "U+0036": {
+      "char": "6",
+      "name": "DIGIT SIX",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "69"
+    },
+    "U+0037": {
+      "char": "7",
+      "name": "DIGIT SEVEN",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "7"
+    },
+    "U+0038": {
+      "char": "8",
+      "name": "DIGIT EIGHT",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "8"
+    },
+    "U+0039": {
+      "char": "9",
+      "name": "DIGIT NINE",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "69"
+    },
+    "U+003A": {
+      "char": ":",
+      "name": "COLON",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": ":.."
+    },
+    "U+003B": {
+      "char": ";",
+      "name": "SEMICOLON",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+003D": {
+      "char": "=",
+      "name": "EQUALS SIGN",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+003F": {
+      "char": "?",
+      "name": "QUESTION MARK",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "?¿"
+    },
+    "U+0040": {
+      "char": "@",
+      "name": "COMMERCIAL AT",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+0041": {
+      "char": "A",
+      "name": "LATIN CAPITAL LETTER A",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "A"
+    },
+    "U+0042": {
+      "char": "B",
+      "name": "LATIN CAPITAL LETTER B",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "B"
+    },
+    "U+0043": {
+      "char": "C",
+      "name": "LATIN CAPITAL LETTER C",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "CU"
+    },
+    "U+0044": {
+      "char": "D",
+      "name": "LATIN CAPITAL LETTER D",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "D"
+    },
+    "U+0045": {
+      "char": "E",
+      "name": "LATIN CAPITAL LETTER E",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "E"
+    },
+    "U+0046": {
+      "char": "F",
+      "name": "LATIN CAPITAL LETTER F",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "F"
+    },
+    "U+0047": {
+      "char": "G",
+      "name": "LATIN CAPITAL LETTER G",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "G"
+    },
+    "U+0048": {
+      "char": "H",
+      "name": "LATIN CAPITAL LETTER H",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "HI"
+    },
+    "U+0049": {
+      "char": "I",
+      "name": "LATIN CAPITAL LETTER I",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "HI"
+    },
+    "U+004A": {
+      "char": "J",
+      "name": "LATIN CAPITAL LETTER J",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "J"
+    },
+    "U+004B": {
+      "char": "K",
+      "name": "LATIN CAPITAL LETTER K",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "K"
+    },
+    "U+004C": {
+      "char": "L",
+      "name": "LATIN CAPITAL LETTER L",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "L"
+    },
+    "U+004D": {
+      "char": "M",
+      "name": "LATIN CAPITAL LETTER M",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "MW"
+    },
+    "U+004E": {
+      "char": "N",
+      "name": "LATIN CAPITAL LETTER N",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "NZ"
+    },
+    "U+004F": {
+      "char": "O",
+      "name": "LATIN CAPITAL LETTER O",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "OO"
+    },
+    "U+0050": {
+      "char": "P",
+      "name": "LATIN CAPITAL LETTER P",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "P"
+    },
+    "U+0051": {
+      "char": "Q",
+      "name": "LATIN CAPITAL LETTER Q",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "Q"
+    },
+    "U+0052": {
+      "char": "R",
+      "name": "LATIN CAPITAL LETTER R",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "R"
+    },
+    "U+0053": {
+      "char": "S",
+      "name": "LATIN CAPITAL LETTER S",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "S"
+    },
+    "U+0054": {
+      "char": "T",
+      "name": "LATIN CAPITAL LETTER T",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "T"
+    },
+    "U+0055": {
+      "char": "U",
+      "name": "LATIN CAPITAL LETTER U",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "CU"
+    },
+    "U+0056": {
+      "char": "V",
+      "name": "LATIN CAPITAL LETTER V",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "V"
+    },
+    "U+0057": {
+      "char": "W",
+      "name": "LATIN CAPITAL LETTER W",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "MW"
+    },
+    "U+0058": {
+      "char": "X",
+      "name": "LATIN CAPITAL LETTER X",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "X"
+    },
+    "U+0059": {
+      "char": "Y",
+      "name": "LATIN CAPITAL LETTER Y",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "Y"
+    },
+    "U+005A": {
+      "char": "Z",
+      "name": "LATIN CAPITAL LETTER Z",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "NZ"
+    },
+    "U+005C": {
+      "char": "\\",
+      "name": "REVERSE SOLIDUS",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+005E": {
+      "char": "^",
+      "name": "CIRCUMFLEX ACCENT",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+005F": {
+      "char": "_",
+      "name": "LOW LINE",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+0061": {
+      "char": "a",
+      "name": "LATIN SMALL LETTER A",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "A",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0062": {
+      "char": "b",
+      "name": "LATIN SMALL LETTER B",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "B",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0063": {
+      "char": "c",
+      "name": "LATIN SMALL LETTER C",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "CU",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0064": {
+      "char": "d",
+      "name": "LATIN SMALL LETTER D",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "D",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0065": {
+      "char": "e",
+      "name": "LATIN SMALL LETTER E",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "E",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0066": {
+      "char": "f",
+      "name": "LATIN SMALL LETTER F",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "F",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0067": {
+      "char": "g",
+      "name": "LATIN SMALL LETTER G",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "G",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0068": {
+      "char": "h",
+      "name": "LATIN SMALL LETTER H",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "HI",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0069": {
+      "char": "i",
+      "name": "LATIN SMALL LETTER I",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "HI",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+006A": {
+      "char": "j",
+      "name": "LATIN SMALL LETTER J",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "J",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+006B": {
+      "char": "k",
+      "name": "LATIN SMALL LETTER K",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "K",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+006C": {
+      "char": "l",
+      "name": "LATIN SMALL LETTER L",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "L",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+006D": {
+      "char": "m",
+      "name": "LATIN SMALL LETTER M",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "MW",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+006E": {
+      "char": "n",
+      "name": "LATIN SMALL LETTER N",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "NZ",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+006F": {
+      "char": "o",
+      "name": "LATIN SMALL LETTER O",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "OO",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0070": {
+      "char": "p",
+      "name": "LATIN SMALL LETTER P",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "P",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0071": {
+      "char": "q",
+      "name": "LATIN SMALL LETTER Q",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "Q",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0072": {
+      "char": "r",
+      "name": "LATIN SMALL LETTER R",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "R",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0073": {
+      "char": "s",
+      "name": "LATIN SMALL LETTER S",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "S",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0074": {
+      "char": "t",
+      "name": "LATIN SMALL LETTER T",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "T",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0075": {
+      "char": "u",
+      "name": "LATIN SMALL LETTER U",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "CU",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0076": {
+      "char": "v",
+      "name": "LATIN SMALL LETTER V",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "V",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0077": {
+      "char": "w",
+      "name": "LATIN SMALL LETTER W",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "MW",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0078": {
+      "char": "x",
+      "name": "LATIN SMALL LETTER X",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "X",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+0079": {
+      "char": "y",
+      "name": "LATIN SMALL LETTER Y",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "Y",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+007A": {
+      "char": "z",
+      "name": "LATIN SMALL LETTER Z",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "NZ",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+00A1": {
+      "char": "¡",
+      "name": "INVERTED EXCLAMATION MARK",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "!¡"
+    },
+    "U+00A3": {
+      "char": "£",
+      "name": "POUND SIGN",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "£"
+    },
+    "U+00A5": {
+      "char": "¥",
+      "name": "YEN SIGN",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "¥"
+    },
+    "U+00B7": {
+      "char": "·",
+      "name": "MIDDLE DOT",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+00BF": {
+      "char": "¿",
+      "name": "INVERTED QUESTION MARK",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "?¿"
+    },
+    "U+00C7": {
+      "char": "Ç",
+      "name": "LATIN CAPITAL LETTER C WITH CEDILLA",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "Ç"
+    },
+    "U+00D7": {
+      "char": "×",
+      "name": "MULTIPLICATION SIGN",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+00DF": {
+      "char": "ß",
+      "name": "LATIN SMALL LETTER SHARP S",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "ß"
+    },
+    "U+00E7": {
+      "char": "ç",
+      "name": "LATIN SMALL LETTER C WITH CEDILLA",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "Ç",
+      "note": "unicase - same piece as the capital"
+    },
+    "U+02DC": {
+      "char": "˜",
+      "name": "SMALL TILDE",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": true,
+      "case_group": "˜"
+    },
+    "U+0300": {
+      "char": "̀",
+      "name": "COMBINING GRAVE ACCENT",
+      "advance_cells": 0.0,
+      "zero_width": true,
+      "is_diacritic": true,
+      "case_group": "̀"
+    },
+    "U+0302": {
+      "char": "̂",
+      "name": "COMBINING CIRCUMFLEX ACCENT",
+      "advance_cells": 0.0,
+      "zero_width": true,
+      "is_diacritic": true,
+      "case_group": "̂"
+    },
+    "U+2013": {
+      "char": "–",
+      "name": "EN DASH",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+2014": {
+      "char": "—",
+      "name": "EM DASH",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+2018": {
+      "char": "‘",
+      "name": "LEFT SINGLE QUOTATION MARK",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "'’"
+    },
+    "U+2019": {
+      "char": "’",
+      "name": "RIGHT SINGLE QUOTATION MARK",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "'’"
+    },
+    "U+201C": {
+      "char": "“",
+      "name": "LEFT DOUBLE QUOTATION MARK",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "'’",
+      "note": "the '’ piece, rotated"
+    },
+    "U+201D": {
+      "char": "”",
+      "name": "RIGHT DOUBLE QUOTATION MARK",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "'’",
+      "note": "the '’ piece, rotated"
+    },
+    "U+2022": {
+      "char": "•",
+      "name": "BULLET",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "•"
+    },
+    "U+20AC": {
+      "char": "€",
+      "name": "EURO SIGN",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "€"
+    },
+    "U+2190": {
+      "char": "←",
+      "name": "LEFTWARDS ARROW",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "↑",
+      "note": "the ↑ piece, rotated"
+    },
+    "U+2191": {
+      "char": "↑",
+      "name": "UPWARDS ARROW",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "↑"
+    },
+    "U+2192": {
+      "char": "→",
+      "name": "RIGHTWARDS ARROW",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "↑",
+      "note": "the ↑ piece, rotated"
+    },
+    "U+2193": {
+      "char": "↓",
+      "name": "DOWNWARDS ARROW",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "↑",
+      "note": "the ↑ piece, rotated"
+    },
+    "U+2196": {
+      "char": "↖",
+      "name": "NORTH WEST ARROW",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "↗",
+      "note": "the ↗ piece, rotated"
+    },
+    "U+2197": {
+      "char": "↗",
+      "name": "NORTH EAST ARROW",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "↗"
+    },
+    "U+2198": {
+      "char": "↘",
+      "name": "SOUTH EAST ARROW",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "↗",
+      "note": "the ↗ piece, rotated"
+    },
+    "U+2199": {
+      "char": "↙",
+      "name": "SOUTH WEST ARROW",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "↗",
+      "note": "the ↗ piece, rotated"
+    },
+    "U+23B8": {
+      "char": "⎸",
+      "name": "LEFT VERTICAL BOX LINE",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+23B9": {
+      "char": "⎹",
+      "name": "RIGHT VERTICAL BOX LINE",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+23BA": {
+      "char": "⎺",
+      "name": "HORIZONTAL SCAN LINE-1",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+23BD": {
+      "char": "⎽",
+      "name": "HORIZONTAL SCAN LINE-9",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+2606": {
+      "char": "☆",
+      "name": "WHITE STAR",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "☆"
+    },
+    "U+2661": {
+      "char": "♡",
+      "name": "WHITE HEART SUIT",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": "♡"
+    },
+    "U+26AA": {
+      "char": "⚪",
+      "name": "MEDIUM WHITE CIRCLE",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    },
+    "U+26AB": {
+      "char": "⚫",
+      "name": "MEDIUM BLACK CIRCLE",
+      "advance_cells": 1.0,
+      "zero_width": false,
+      "is_diacritic": false,
+      "case_group": null,
+      "printable": false,
+      "note": "in the font but NOT in the physical case - cannot be set"
+    }
+  },
+  "_unicase": "Lowercase outlines are identical to uppercase; they are the same physical piece. Typing lowercase is fine.",
+  "_unprintable": "Some glyphs exist digitally but have no piece in the case. printable:false marks them; the UI must refuse them, not silently drop them."
+}

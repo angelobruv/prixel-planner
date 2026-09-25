@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Build docs/prixel-datasheet.html from assets/.
 
-Sources of truth: assets/catalogue.json, assets/shapes/*.svg, assets/fonts/PRIXELMono.otf.
+Sources of truth: assets/catalogue.json, assets/shapes/*.svg. The PRIXEL Mono font is not
+stored in this repo; pass --embed-font FILE to inline a copy you downloaded yourself.
 Never hand-edit docs/prixel-datasheet.html — edit the data or this script and re-run.
 
     python3 scripts/build-datasheet.py                 # embed the font (default)
@@ -13,7 +14,7 @@ read from the font at build time.
 import base64, glob, html, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-EMBED_FONT = "--no-embed-font" not in sys.argv
+EMBED_FONT = "--embed-font" in sys.argv  # never commit an embedded build: see NOTICE.md
 
 
 CAT = json.load(open(os.path.join(ROOT, "assets", "catalogue.json")))
@@ -53,11 +54,14 @@ for _p in CAT["pieces"]:
     _vb, _inner = clean(os.path.join(ROOT, "assets", "shapes", _p["svg"]))
     SH[_p["code"]] = {"vb": _vb, "inner": _inner}
 
-_font_path = os.path.join(ROOT, "assets", "fonts", "PRIXELMono.otf")
+_font_path = sys.argv[sys.argv.index("--embed-font") + 1] if EMBED_FONT else ""
 FONT_B64 = base64.b64encode(open(_font_path, "rb").read()).decode() if EMBED_FONT else ""
 
-from fontTools.ttLib import TTFont as _TTF
-CPS = [c for c in sorted(_TTF(_font_path).getBestCmap()) if c not in (0x20, 0xA0)]
+# The character list comes from the glyph metadata, not the font, so the
+# datasheet builds without a copy of PRIXEL Mono in the repo.
+_META = json.load(open(os.path.join(ROOT, "assets", "mono-glyphs.meta.json")))
+CPS = sorted(int(k[2:], 16) for k in _META["glyphs"])
+CPS = [c for c in CPS if c not in (0x20, 0xA0)]
 
 FAMILIES = [
     ("Square",            "#fcee21", ["PX-001", "PX-002", "PX-003", "PX-004"]),
